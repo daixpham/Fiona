@@ -15,7 +15,7 @@ public class MapBackgroundImage : MonoBehaviour {
 		fieldOfView = tmp.fieldOfView;
 		offset = bg02.transform.position.x - bg01.transform.position.x;
 		Debug.Log (bg02.transform.position.x+" "+ bg01.transform.position.x +" Offset: "+offset);
-		bg01.transform.position.x = offset + bg02.transform.position.x;
+//		bg01.transform.position.x = offset + bg02.transform.position.x;
 	}
 	
 	// Update is called once per frame
