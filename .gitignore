@@ -10,6 +10,7 @@ ty generated #
 [Bb]uild
 /[Bb]uilds/
 /[Ll]ibrary/
+Fiona/Library/
 sysinfo.txt
 *.stackdump
 /Assets/AssetStoreTools*
