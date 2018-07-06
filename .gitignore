@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 ty generated #
+=======
+# =============== #
+# Unity generated #
+>>>>>>> 1ed62259dfdfe42d5b7129acea12f6039b14b00d
 # =============== #
 [Tt]emp/
 [Oo]bj/
@@ -11,6 +16,7 @@ sysinfo.txt
 *.apk
 *.unitypackage
  
+<<<<<<< HEAD
  # ===================================== #
  # Visual Studio / MonoDevelop generated #
  # ===================================== #
@@ -42,3 +48,36 @@ sysinfo.txt
   [Dd]esktop.ini
   Corridor/Library/ShaderCache/
   Corridor/Library/metadata/
+=======
+# ===================================== #
+# Visual Studio / MonoDevelop generated #
+# ===================================== #
+[Ee]xported[Oo]bj/
+.vs/
+/*.userprefs
+/*.csproj
+/*.pidb
+*.pidb.meta
+/*.suo
+/*.sln*
+/*.user
+/*.unityproj
+/*.booproj
+.consulo/
+/*.tmp
+/*.svd
+ 
+# ============ #
+# OS generated #
+# ============ #
+.DS_Store*
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+ehthumbs.db
+[Tt]humbs.db
+[Dd]esktop.ini
+Corridor/Library/ShaderCache/
+Corridor/Library/metadata/
+>>>>>>> 1ed62259dfdfe42d5b7129acea12f6039b14b00d
