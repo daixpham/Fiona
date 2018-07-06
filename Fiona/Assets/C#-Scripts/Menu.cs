@@ -79,7 +79,7 @@ public class Menu : MonoBehaviour
         else
         {
             CreditsB = false;
-            imgCredits.transform.position = new Vector3(0,0,0);
+            imgCredits.transform.position = new Vector3(-100,-100,0);
         }
 
     }
