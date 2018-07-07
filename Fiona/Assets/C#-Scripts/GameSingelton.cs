@@ -40,11 +40,14 @@ public class GameSingelton : MonoBehaviour {
     }
     void Start()
     {
-       
         resetVariables();
         StartCoroutine(LoadYourSceneAsync((int)sceneAllowed.MainMenu));
     }
 
+    public void UpdateScore()
+    {
+        PlayerPoint++;
+    }
     private void FixedUpdate()
     {
         time++;
@@ -56,7 +59,6 @@ public class GameSingelton : MonoBehaviour {
         if (start)
         {
             DrainHealth();
-            PlayerPoint++;
         }
         if (!start && UnityEngine.SceneManagement.SceneManager.GetActiveScene().name =="Paul" )
         {
