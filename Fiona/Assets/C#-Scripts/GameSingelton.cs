@@ -6,7 +6,7 @@ public class GameSingelton : MonoBehaviour {
 
     private static GameSingelton instance = null;
     private float DRAIN_RATE = 0.1f;
-    private enum sceneAllowed { Load, MainMenu,Game }
+    private enum sceneAllowed { Load=0, MainMenu=1,Game =2}
 
     public uint time { get; private set; }
     public uint TotalTimePlayed { get; private set; }
@@ -14,7 +14,8 @@ public class GameSingelton : MonoBehaviour {
     public float TotalDistance { get; private set; }
     public int PlayerPoint { get; private set; }
     public float PlayerHealth { get; private set; }
-    
+
+    public bool start;
     // Use this for initializationv
     public static GameSingelton Instance
     {
@@ -31,28 +32,47 @@ public class GameSingelton : MonoBehaviour {
         {
             Destroy(this.gameObject);
         }
-
+        print("bla");
         instance = this;
         DontDestroyOnLoad(this.gameObject);
     }
     void Start()
     {
         //time++;
-        //PlayerPoint = 0;
-        //PlayerHealth = 100;
+        PlayerPoint = 0;
+        PlayerHealth = 10;
         StartCoroutine(LoadYourSceneAsync());
     }
     void Update()
     {
         //get Player 
-        PlayerPoint++;
-        PlayerHealth -= DRAIN_RATE;
-        if (PlayerHealth == 0)
+        //PlayerPoint++;
+        if (start)
+        { DrainHealth(); }
+        if (PlayerHealth <= 0)
         {
-            // GameverScreen and restart optiom
+            start = false;
+
+            //stop "update" and show menu for restart and going to Menu
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                PlayerHealth = 10;
+                UnityEngine.SceneManagement.SceneManager.LoadScene((int)sceneAllowed.MainMenu);
+            }
+            if (Input.anyKeyDown && !Input.GetKeyDown(KeyCode.Escape))
+            {
+                start = true;
+                PlayerHealth = 10;
+                UnityEngine.SceneManagement.SceneManager.LoadScene((int)sceneAllowed.Game);
+            }
         }
-        Debug.Log("Points "+PlayerPoint+"Health  "+PlayerHealth);
+        Debug.Log(/**"Points "+PlayerPoint+**/"Health  "+PlayerHealth);
     }
+    public void DrainHealth()
+    {
+        PlayerHealth -= DRAIN_RATE;
+    }
+    public void RestoreHealth(float h) { PlayerHealth += h; }
     IEnumerator LoadYourSceneAsync()
     {
         AsyncOperation asyncLoad = UnityEngine.SceneManagement.SceneManager.LoadSceneAsync((int)sceneAllowed.MainMenu);

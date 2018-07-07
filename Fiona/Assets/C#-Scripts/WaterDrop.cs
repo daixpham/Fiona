@@ -5,7 +5,8 @@ using UnityEngine;
 public class WaterDrop : MonoBehaviour {
 
 	// Use this for initialization
-	void Start () {
+	void Start ()
+    {
 		
 	}
 	
@@ -13,4 +14,15 @@ public class WaterDrop : MonoBehaviour {
 	void Update () {
 		
 	}
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.name == "Player")
+        {
+            print(collision.gameObject.name);
+            Object.Destroy(this.gameObject);
+            GameSingelton.Instance.RestoreHealth(2f);
+        }
+
+    }
 }
