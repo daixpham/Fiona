@@ -57,7 +57,7 @@ public class Menu : MonoBehaviour
         if (EventSystem.current.currentSelectedGameObject.name.ToString().Equals("Start"))
         {
             print("Start");
-            SceneManager.LoadScene("Paul");
+            SceneManager.LoadScene(2);
             GameSingelton.Instance.start = true;
         }
         Debug.Log("You have clicked the button!");
