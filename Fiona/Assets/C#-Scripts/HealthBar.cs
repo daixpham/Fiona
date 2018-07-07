@@ -16,7 +16,7 @@ public class HealthBar : MonoBehaviour {
 		//Set Healthbar stats
 		healthbar = this.GetComponent<Slider> ();
 		healthbar.maxValue = GameSingelton.PlayerMaxHealth;
-
+        healthbar.value = GameSingelton.PlayerHealth;
 		handle = healthbar.transform.GetChild (2).gameObject.transform.GetChild(0).gameObject;
 		GameObject tmpObj = healthbar.transform.GetChild (0).gameObject;
 		Image tmpImg = tmpObj.GetComponent<Image> ();
@@ -25,8 +25,7 @@ public class HealthBar : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-        float currentHP = GameSingelton.Instance.PlayerHealth;
-
+        float currentHP = GameSingelton.PlayerHealth;
         if ( currentHP> 0) {
 			healthbar.value = currentHP;
 		} else {

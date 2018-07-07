@@ -16,7 +16,7 @@ public class GameSingelton : MonoBehaviour {
     public float distance { get; set; }
     public float TotalDistance { get; private set; }
     public int PlayerPoint { get; private set; }
-    public float PlayerHealth { get; private set; }
+    public static float PlayerHealth { get; private set; }
     public const float PlayerMaxHealth = 100;
 
     public static bool start;
@@ -77,8 +77,8 @@ public class GameSingelton : MonoBehaviour {
                 UnityEngine.SceneManagement.SceneManager.LoadScene((int)sceneAllowed.Game);
             }
         }
-        if(start)
-            Debug.Log(/**"Points "+PlayerPoint+**/"Health  "+PlayerHealth);
+        //if(start)
+        //    Debug.Log(/**"Points "+PlayerPoint+**/"Health  "+PlayerHealth);
     }
 
     private void resetVariables()

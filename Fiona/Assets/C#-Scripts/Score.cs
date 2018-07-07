@@ -20,7 +20,7 @@ public class Score : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        print(GameSingelton.start);
+        
         if (GameSingelton.start)
         {
             GameSingelton.Instance.UpdateScore();
@@ -40,6 +40,6 @@ public class Score : MonoBehaviour {
 
     void onDeath()
     {
-        MenuEscapeScore.text = "Restart Press Any Key \n Main Menu Escape \n your score was :" + score;
+     //   MenuEscapeScore.text = "Restart Press Any Key \n Main Menu Escape \n your score was :" + score;
     }
 }
