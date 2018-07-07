@@ -11,8 +11,10 @@ public class TestAnimationScript : MonoBehaviour {
     private bool _dead;
     private bool _crouch;
     private bool grounded;
+    private bool w_pressed;
     public Animator controller;
     public Rigidbody rigidBody;
+
     // Use this for initialization
     void Start () {
         rigidBody = GetComponent<Rigidbody>();
@@ -27,12 +29,12 @@ public class TestAnimationScript : MonoBehaviour {
         }
 
 
-        if (Input.GetKeyDown(KeyCode.W))
+        if (Input.GetKeyDown(KeyCode.W) && !w_pressed)
         {
             
             controller.SetBool("IsJumping", true);
             
-            rigidBody.AddForce(new Vector3(0, 10f,0), ForceMode.Impulse);
+            rigidBody.AddForce(new Vector3(0, 3f,0), ForceMode.Impulse);
          
             if (grounded == true )
             {
@@ -42,7 +44,10 @@ public class TestAnimationScript : MonoBehaviour {
             }
         }
 
-      
+        if (_jumping == true)
+        {
+            w_pressed = false;
+        }
 
     }
 
