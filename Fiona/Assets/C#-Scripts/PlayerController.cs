@@ -20,7 +20,8 @@ public class PlayerController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        
+		float z = Input.GetAxis ("Vertical") * Time.deltaTime * 100f;
+		transform.Translate (0, z, 0);
 		float y_ = Animation.transform.rotation.y;
         if (Input.GetKey(KeyCode.D))
         {

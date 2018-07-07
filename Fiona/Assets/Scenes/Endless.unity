@@ -121,7 +121,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 227084255}
-  - component: {fileID: 227084254}
   m_Layer: 5
   m_Name: MapLogic
   m_TagString: Untagged
@@ -129,31 +128,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &227084254
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 227084253}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 94054bd3627ae2a438574636bb02c295, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxSpeed: 20
-  player: {fileID: 1215236235}
-  map: {fileID: 416852639}
-  tiles:
-  - {fileID: 1951138115894588, guid: 5ddb1dd06ee3b7146aa7150437793cb3, type: 2}
-  - {fileID: 1148047769311254, guid: e8e2bad378822b44d91f81cafbb68b82, type: 2}
-  - {fileID: 1274408824954330, guid: fdf8230da8ae00246928f7526fa0a5e2, type: 2}
-  - {fileID: 1745377137464870, guid: 215e95336e1fbae4d88bd8a7c95a2c3f, type: 2}
-  - {fileID: 1033025621018376, guid: 7b36e396826ee7e4890254b60b3c94af, type: 2}
-  OasisTiles:
-  - {fileID: 1581174587756768, guid: c67527ee9f926884094dc9c4e2ca785d, type: 2}
-  - {fileID: 1373896295035708, guid: fda56e62ef87469499a65eb7e9b65d32, type: 2}
-  tileSize: 40
-  numOfSeconds: 10
 --- !u!224 &227084255
 RectTransform:
   m_ObjectHideFlags: 0
@@ -311,6 +285,7 @@ GameObject:
   m_Component:
   - component: {fileID: 416852641}
   - component: {fileID: 416852640}
+  - component: {fileID: 416852642}
   m_Layer: 0
   m_Name: World
   m_TagString: Untagged
@@ -342,6 +317,30 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &416852642
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 416852639}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94054bd3627ae2a438574636bb02c295, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxSpeed: 20
+  player: {fileID: 1215236235}
+  map: {fileID: 416852639}
+  tiles:
+  - {fileID: 1951138115894588, guid: 5ddb1dd06ee3b7146aa7150437793cb3, type: 2}
+  - {fileID: 1148047769311254, guid: e8e2bad378822b44d91f81cafbb68b82, type: 2}
+  - {fileID: 1274408824954330, guid: fdf8230da8ae00246928f7526fa0a5e2, type: 2}
+  - {fileID: 1745377137464870, guid: 215e95336e1fbae4d88bd8a7c95a2c3f, type: 2}
+  - {fileID: 1033025621018376, guid: 7b36e396826ee7e4890254b60b3c94af, type: 2}
+  OasisTiles:
+  - {fileID: 1581174587756768, guid: c67527ee9f926884094dc9c4e2ca785d, type: 2}
+  - {fileID: 1373896295035708, guid: fda56e62ef87469499a65eb7e9b65d32, type: 2}
+  tileSize: 40
 --- !u!1 &562077629
 GameObject:
   m_ObjectHideFlags: 0
@@ -632,11 +631,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4066568731311172, guid: e4ac9e39b26fa244bbaeb5c398e972c5, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 85.26321
+      value: 71
       objectReference: {fileID: 0}
     - target: {fileID: 4066568731311172, guid: e4ac9e39b26fa244bbaeb5c398e972c5, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 34.7
+      value: 11.4
       objectReference: {fileID: 0}
     - target: {fileID: 4066568731311172, guid: e4ac9e39b26fa244bbaeb5c398e972c5, type: 2}
       propertyPath: m_LocalPosition.z
