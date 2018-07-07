@@ -56,7 +56,7 @@ public class Menu : MonoBehaviour
         if (EventSystem.current.currentSelectedGameObject.name.ToString().Equals("Start"))
         {
             print("Start");
-       //     SceneManager.LoadScene("Erik");
+            SceneManager.LoadScene("Paul");
         }
         Debug.Log("You have clicked the button!");
     }
