@@ -6,7 +6,7 @@ public class GameSingelton : MonoBehaviour {
 
     private static GameSingelton instance = null;
     private float DRAIN_RATE = 0.1f;
-    private enum sceneAllowed { Load, MainMenu,Game }
+    private enum sceneAllowed { Load=0, MainMenu=1,Game =2}
 
     public uint time { get; private set; }
     public uint TotalTimePlayed { get; private set; }
@@ -63,7 +63,7 @@ public class GameSingelton : MonoBehaviour {
             {
                 start = true;
                 PlayerHealth = 10;
-                UnityEngine.SceneManagement.SceneManager.LoadScene("Paul");
+                UnityEngine.SceneManagement.SceneManager.LoadScene((int)sceneAllowed.Game);
             }
         }
         Debug.Log(/**"Points "+PlayerPoint+**/"Health  "+PlayerHealth);

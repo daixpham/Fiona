@@ -15,7 +15,7 @@ public class WaterDrop : MonoBehaviour {
 		
 	}
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.name == "Player")
         {
@@ -23,7 +23,6 @@ public class WaterDrop : MonoBehaviour {
             Object.Destroy(this.gameObject);
             GameSingelton.Instance.RestoreHealth(2f);
         }
-
 
     }
 }
