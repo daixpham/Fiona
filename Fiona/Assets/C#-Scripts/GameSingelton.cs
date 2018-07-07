@@ -99,7 +99,13 @@ public class GameSingelton : MonoBehaviour {
         PlayerHealth -= DRAIN_RATE;
         if (PlayerHealth <= 0) { start = false; }
     }
-    public void RestoreHealth(float h) { PlayerHealth += h; }
+    public void RestoreHealth(float h) { 
+		PlayerHealth += h; 
+		if (PlayerHealth > PlayerMaxHealth) {
+			PlayerHealth = PlayerMaxHealth;
+		}
+
+	}
 
     IEnumerator LoadYourSceneAsync(int i)
     {

@@ -17,10 +17,10 @@ public class WaterDrop : MonoBehaviour {
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.name == "Player")
+        if (collision.gameObject.tag == "Player")
         {
             print(collision.gameObject.name);
-            GameSingelton.Instance.RestoreHealth(2f);
+            GameSingelton.Instance.RestoreHealth(20f);
             Object.Destroy(this.gameObject);
          }
 
