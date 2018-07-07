@@ -107,7 +107,7 @@ GameObject:
   - component: {fileID: 222770471149023294}
   - component: {fileID: 114793368060073190}
   m_Layer: 5
-  m_Name: Image
+  m_Name: GameOverBG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -124,7 +124,7 @@ GameObject:
   - component: {fileID: 222183822355104678}
   - component: {fileID: 114334335543693120}
   m_Layer: 5
-  m_Name: Text
+  m_Name: 'GameOverScore '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -172,6 +172,7 @@ GameObject:
   - component: {fileID: 114343468587626066}
   - component: {fileID: 114748821472317244}
   - component: {fileID: 114120582680941914}
+  - component: {fileID: 114900348592676726}
   m_Layer: 5
   m_Name: UI
   m_TagString: Untagged
@@ -357,7 +358,7 @@ MonoBehaviour:
   m_Menu: {fileID: 114796761189789080}
   m_Restart: {fileID: 114555867017460992}
   img: {fileID: 114793368060073190}
-  Tutorial: {fileID: 0}
+  Tutorial: {fileID: 114940852020017726}
 --- !u!114 &114149779844820402
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -452,7 +453,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: 'GameOverScore
+
+'
 --- !u!114 &114343468587626066
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -760,6 +763,17 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: 'Score: '
+--- !u!114 &114900348592676726
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1528482702293704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82aa23e556394a842a001323381000f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114931337640829704
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -827,7 +841,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Texture: {fileID: 0}
+  m_Texture: {fileID: 2800000, guid: 77bd102c9b118664e90b2184f256cdcd, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -1065,7 +1079,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 400, y: 400}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224430101007257112
 RectTransform:
