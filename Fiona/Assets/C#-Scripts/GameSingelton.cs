@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.IO;
+using System.Text;
 
 public class GameSingelton : MonoBehaviour {
 
@@ -32,50 +34,69 @@ public class GameSingelton : MonoBehaviour {
         {
             Destroy(this.gameObject);
         }
-        print("bla");
         instance = this;
         DontDestroyOnLoad(this.gameObject);
     }
     void Start()
     {
-        //time++;
-        PlayerPoint = 0;
-        PlayerHealth = 10;
-        StartCoroutine(LoadYourSceneAsync());
+        resetVariables();
+        StartCoroutine(LoadYourSceneAsync(1));
     }
+
+    private void FixedUpdate()
+    {
+        time++;
+    }
+
     void Update()
     {
         //get Player 
         //PlayerPoint++;
         if (start)
         { DrainHealth(); }
-        if (PlayerHealth <= 0)
+        if (!start && UnityEngine.SceneManagement.SceneManager.GetActiveScene().name =="Paul" )
         {
             start = false;
 
             //stop "update" and show menu for restart and going to Menu
             if (Input.GetKeyDown(KeyCode.Escape))
             {
-                PlayerHealth = 10;
+                resetVariables();
                 UnityEngine.SceneManagement.SceneManager.LoadScene((int)sceneAllowed.MainMenu);
             }
             if (Input.anyKeyDown && !Input.GetKeyDown(KeyCode.Escape))
             {
+                resetVariables();
                 start = true;
-                PlayerHealth = 10;
                 UnityEngine.SceneManagement.SceneManager.LoadScene((int)sceneAllowed.Game);
             }
         }
         Debug.Log(/**"Points "+PlayerPoint+**/"Health  "+PlayerHealth);
     }
+
+    private void resetVariables()
+    {
+        time = 0;
+        PlayerHealth = 3;
+        PlayerPoint = 0;
+        distance = 0;
+    }
+
+    public void Distance(uint dis)
+    {
+        distance+= dis;
+    }
+
     public void DrainHealth()
     {
         PlayerHealth -= DRAIN_RATE;
+        if (PlayerHealth <= 0) start = false;
     }
     public void RestoreHealth(float h) { PlayerHealth += h; }
-    IEnumerator LoadYourSceneAsync()
+
+    IEnumerator LoadYourSceneAsync(int i)
     {
-        AsyncOperation asyncLoad = UnityEngine.SceneManagement.SceneManager.LoadSceneAsync((int)sceneAllowed.MainMenu);
+        AsyncOperation asyncLoad = UnityEngine.SceneManagement.SceneManager.LoadSceneAsync(i);
 
         // Wait until the asynchronous scene fully loads
         while (!asyncLoad.isDone)

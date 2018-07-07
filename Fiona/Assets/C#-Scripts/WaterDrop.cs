@@ -20,9 +20,9 @@ public class WaterDrop : MonoBehaviour {
         if (collision.gameObject.name == "Player")
         {
             print(collision.gameObject.name);
-            Object.Destroy(this.gameObject);
             GameSingelton.Instance.RestoreHealth(2f);
-        }
+            Object.Destroy(this.gameObject);
+         }
 
     }
 }
