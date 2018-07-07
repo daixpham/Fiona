@@ -26,7 +26,7 @@ public class HealthBar : MonoBehaviour {
 	void Update () {
 		float currentHP = player.GetComponent<PlayerAttributes> ().getCurrentHP ();
 		if ( currentHP> 0) {
-			healthbar.value = currentHP;
+			healthbar.value = GameSingelton.Instance.PlayerHealth;
 		} else {
 			Image image = handle.GetComponent<Image> ();
 			image.color = color2;
