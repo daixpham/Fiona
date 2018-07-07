@@ -22,6 +22,8 @@ GameObject:
   - component: {fileID: 33878589653531092}
   - component: {fileID: 23672504313285406}
   - component: {fileID: 65431358495245796}
+  - component: {fileID: 135556212908152902}
+  - component: {fileID: 65239362207086194}
   m_Layer: 0
   m_Name: desert_part4
   m_TagString: Untagged
@@ -84,6 +86,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1846982503573000}
   m_Mesh: {fileID: 4300000, guid: a0962c7386548914c831d0989e45b01a, type: 3}
+--- !u!65 &65239362207086194
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1846982503573000}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.020570036, y: 0.031199265, z: 0.05627064}
+  m_Center: {x: 0.00003906886, y: 0.00432957, z: -0.00901031}
 --- !u!65 &65431358495245796
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -94,5 +108,17 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.020570036, y: 0.03985835, z: 0.136931}
-  m_Center: {x: 0.000039068982, y: 0, z: 0.03131987}
+  m_Size: {x: 0.020570036, y: 0.04, z: -0.06}
+  m_Center: {x: 0.000039068982, y: 0, z: -0.02}
+--- !u!135 &135556212908152902
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1846982503573000}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.006
+  m_Center: {x: 0.00103, y: 0.004, z: 0.001226}
