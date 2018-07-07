@@ -110,4 +110,8 @@ public class MapScript : MonoBehaviour {
 	public void exitCollision(){
 		collision = 0;
 	}
+
+	public GameObject getLastTile(){
+		return tileList [tileList.Count - 1];
+	}
 }

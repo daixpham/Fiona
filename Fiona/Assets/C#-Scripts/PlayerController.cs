@@ -6,9 +6,9 @@ public class PlayerController : MonoBehaviour {
     [SerializeField] private float max_speed = 3f ;
     [SerializeField] private float max_jumpPower = 8f;
     [SerializeField] private GameObject player;
-    [SerializeField] private Rigidbody2D rigidBody;
+    [SerializeField] private Rigidbody rigidBody;
     [SerializeField] private float movement = 0f;
-    public bool grounded;
+    public bool grounded=true;
     public bool w_pressed;
     GameObject Animation;
     Animator tmp;
@@ -17,13 +17,14 @@ public class PlayerController : MonoBehaviour {
     void Start () {
         Animation = transform.GetChild(0).gameObject;
         tmp = Animation.GetComponent<Animator>();
-        rigidBody = GetComponent<Rigidbody2D>();
+        rigidBody = GetComponent<Rigidbody>();
         
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		float jump = Input.GetAxis ("Vertical");
+		Debug.Log (jump);
 		float y_ = Animation.transform.rotation.y;
         if (Input.GetKey(KeyCode.D))
         {
@@ -62,7 +63,7 @@ public class PlayerController : MonoBehaviour {
         if (jump!=0 && grounded && !w_pressed )
         {
 			w_pressed = true;
-            rigidBody.AddForce(new Vector2(0,10f), ForceMode2D.Impulse);
+			rigidBody.AddForce(new Vector3(0,max_jumpPower,0), ForceMode.Impulse);
         }
         
 
@@ -76,6 +77,7 @@ public class PlayerController : MonoBehaviour {
         if (collision.gameObject.tag == "Ground") {
             grounded = true;
         }
+		Debug.Log (grounded);
     }
 
     private void OnCollisionExit2D(Collision2D collision)
@@ -85,4 +87,5 @@ public class PlayerController : MonoBehaviour {
             grounded = false;
         }
     }
+		
 }
