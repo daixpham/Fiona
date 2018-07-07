@@ -23,7 +23,7 @@ public class PlayerController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		float jump = Input.GetAxis ("Vertical") * Time.deltaTime * 100f;
+		float jump = Input.GetAxis ("Vertical");
 		float y_ = Animation.transform.rotation.y;
         if (Input.GetKey(KeyCode.D))
         {
@@ -42,7 +42,7 @@ public class PlayerController : MonoBehaviour {
       if (Input.GetKey(KeyCode.A))
         {
            
-				if (Animation.transform.rotation.y != 1)
+			if (Animation.transform.rotation.y != 1)
             {
               
                 Animation.transform.Rotate(0, 180, 0);
@@ -53,22 +53,22 @@ public class PlayerController : MonoBehaviour {
 
 
         }
-        else
-            if (Input.GetKey(KeyCode.W) && grounded && !w_pressed )
+		else
+		{
+				tmp.SetInteger("State", 0);
+
+		}
+		
+        if (jump!=0 && grounded && !w_pressed )
         {
-            w_pressed = true;
+			w_pressed = true;
             rigidBody.AddForce(new Vector2(0,10f), ForceMode2D.Impulse);
         }
-        else
-        {
-            tmp.SetInteger("State", 0);
-
-        }
-        if (Input.GetKeyUp(KeyCode.W))
-        {
-            w_pressed = false;
-        }
         
+
+		if (jump == 0) {
+			w_pressed = false;
+		}
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
