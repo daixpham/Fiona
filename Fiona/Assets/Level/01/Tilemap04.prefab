@@ -21,8 +21,8 @@ GameObject:
   - component: {fileID: 4908818059098446}
   - component: {fileID: 8195094280374359276}
   - component: {fileID: 3664157345773230466}
-  - component: {fileID: 2113883506882485148}
   - component: {fileID: 114211000995478406}
+  - component: {fileID: 68445694650311192}
   m_Layer: 0
   m_Name: Tilemap04
   m_TagString: Ground
@@ -43,19 +43,8 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114211000995478406
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1745377137464870}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3af11cdbffdf67d49b3fe452988afb40, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!19719996 &2113883506882485148
-TilemapCollider2D:
+--- !u!68 &68445694650311192
+EdgeCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -67,6 +56,39 @@ TilemapCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: 0.04851532, y: 0.029710889}
+  - {x: 2.971878, y: -0.01880323}
+  - {x: 3.0205154, y: 0.90538216}
+  - {x: 5.8812065, y: 0.9833267}
+  - {x: 5.927821, y: 2.9142995}
+  - {x: 8.939693, y: 3.043913}
+  - {x: 9.079157, y: 3.9991112}
+  - {x: 11.9478, y: 4.0136876}
+  - {x: 11.894767, y: 5.0485477}
+  - {x: 25.05972, y: 4.977035}
+  - {x: 25.047472, y: 4.015912}
+  - {x: 29.94917, y: 4.008977}
+  - {x: 30.04741, y: 3.079796}
+  - {x: 32.98005, y: 3.0128102}
+  - {x: 33.061325, y: 2.073808}
+  - {x: 35.086525, y: 1.9911412}
+  - {x: 35.101757, y: 1.1308485}
+  - {x: 38.153244, y: 0.9893095}
+  - {x: 38.09405, y: -0.02286011}
+  - {x: 40.078228, y: 0.029711008}
+--- !u!114 &114211000995478406
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1745377137464870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3af11cdbffdf67d49b3fe452988afb40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!483693784 &3664157345773230466
 TilemapRenderer:
   m_ObjectHideFlags: 1

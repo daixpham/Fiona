@@ -21,8 +21,8 @@ GameObject:
   - component: {fileID: 4861222489958428}
   - component: {fileID: 8195094282328442106}
   - component: {fileID: 3664157344568447220}
-  - component: {fileID: 2113883505704135256}
   - component: {fileID: 114227925243206098}
+  - component: {fileID: 68812889085833386}
   m_Layer: 0
   m_Name: Tilemap05
   m_TagString: Ground
@@ -43,19 +43,8 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114227925243206098
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1033025621018376}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3af11cdbffdf67d49b3fe452988afb40, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!19719996 &2113883505704135256
-TilemapCollider2D:
+--- !u!68 &68812889085833386
+EdgeCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -67,6 +56,42 @@ TilemapCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: 0, y: 0.029710889}
+  - {x: 5.0094757, y: 0.08407526}
+  - {x: 4.960963, y: 0.95710796}
+  - {x: 11.849506, y: 0.97926724}
+  - {x: 11.994822, y: 1.9469717}
+  - {x: 13.878083, y: 2.0215495}
+  - {x: 13.928089, y: 2.9295406}
+  - {x: 16.934668, y: 2.9728532}
+  - {x: 17.004667, y: 3.8676097}
+  - {x: 20.01562, y: 3.9877038}
+  - {x: 19.98707, y: 4.898243}
+  - {x: 24.943508, y: 5.016914}
+  - {x: 25.043007, y: 4.0309253}
+  - {x: 29.985117, y: 4.0990715}
+  - {x: 29.961737, y: 3.0215988}
+  - {x: 32.98283, y: 3.041119}
+  - {x: 33.022446, y: 2.0594716}
+  - {x: 37.90651, y: 2.0931258}
+  - {x: 37.907722, y: 1.0882248}
+  - {x: 39.01825, y: 1.0129813}
+  - {x: 39.06662, y: 0.071073174}
+  - {x: 39.907257, y: 0.07959807}
+  - {x: 39.932682, y: 0.07822502}
+--- !u!114 &114227925243206098
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1033025621018376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3af11cdbffdf67d49b3fe452988afb40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!483693784 &3664157344568447220
 TilemapRenderer:
   m_ObjectHideFlags: 1
