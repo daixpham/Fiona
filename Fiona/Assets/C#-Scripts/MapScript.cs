@@ -30,7 +30,7 @@ public class MapScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
+		Debug.Log ((player.transform.position.x));
 		float x = Input.GetAxis ("Horizontal") * Time.deltaTime * maxSpeed;
 		foreach (GameObject tile in tileList) {
 			tile.transform.Translate (-x, 0, 0);

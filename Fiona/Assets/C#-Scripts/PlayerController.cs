@@ -21,14 +21,14 @@ public class PlayerController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         
-        float y_ = player.transform.rotation.y;
+		float y_ = Animation.transform.rotation.y;
         if (Input.GetKey(KeyCode.D))
         {
             
            
-            if (player.transform.rotation.y ==1)
+			if (Animation.transform.rotation.y ==1)
             {
-                transform.Rotate(0, 180, 0);
+                Animation.transform.Rotate(0, 180, 0);
                 
             }
 
@@ -39,11 +39,10 @@ public class PlayerController : MonoBehaviour {
       if (Input.GetKey(KeyCode.A))
         {
            
-            if (player.transform.rotation.y != 1)
+				if (Animation.transform.rotation.y != 1)
             {
               
-                
-                transform.Rotate(0, 180, 0);
+                Animation.transform.Rotate(0, 180, 0);
                 
             }
 
