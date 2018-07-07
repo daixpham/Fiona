@@ -24,6 +24,7 @@ public class Score : MonoBehaviour {
         {
             GameSingelton.Instance.UpdateScore();
         }
+
         score = GameSingelton.Instance.PlayerPoint;
 
         scoreUpdate();
