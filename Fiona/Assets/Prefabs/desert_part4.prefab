@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4365189502656564}
   - component: {fileID: 33878589653531092}
   - component: {fileID: 23672504313285406}
-  - component: {fileID: 64573124003184646}
+  - component: {fileID: 65431358495245796}
   m_Layer: 0
   m_Name: desert_part4
   m_TagString: Untagged
@@ -36,7 +36,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1846982503573000}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalPosition: {x: 21.7, y: 0, z: 0}
   m_LocalScale: {x: 1500, y: 1500, z: 100}
   m_Children: []
   m_Father: {fileID: 0}
@@ -84,8 +84,8 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1846982503573000}
   m_Mesh: {fileID: 4300000, guid: a0962c7386548914c831d0989e45b01a, type: 3}
---- !u!64 &64573124003184646
-MeshCollider:
+--- !u!65 &65431358495245796
+BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -93,8 +93,6 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 14
-  m_SkinWidth: 0.01
-  m_Mesh: {fileID: 4300000, guid: a0962c7386548914c831d0989e45b01a, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 0.020570036, y: 0.03985835, z: 0.136931}
+  m_Center: {x: 0.000039068982, y: 0, z: 0.03131987}

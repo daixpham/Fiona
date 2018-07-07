@@ -36,9 +36,9 @@ public class TerrainSpawner : MonoBehaviour {
 
 	void addTile(){
 		int random = (int)Random.Range (0, tileList.Length);
-		GameObject obj = Instantiate (tileList [random], new Vector3 ((createdList[createdList.Count-1].transform.position.x+tileSize), 0, 0), Quaternion.Euler (270,90,0));
-
-		obj.transform.parent = map.transform;
+        GameObject obj = GameObject.Instantiate(tileList[random], new Vector3((createdList[createdList.Count - 1].transform.position.x + tileSize), 0, 0), Quaternion.Euler(270, 90, 0)) as GameObject;
+    
+        obj.transform.parent = map.transform;
 		createdList.Add (obj);
 		obj.tag = "Ground";
 	}
