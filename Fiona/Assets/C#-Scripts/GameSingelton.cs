@@ -20,6 +20,10 @@ public class GameSingelton : MonoBehaviour {
     public const float PlayerMaxHealth = 100;
 
     public static bool start;
+    public static bool ButtonMenu ;
+    public static bool ButtonRestart ;
+
+    private static bool first;
     // Use this for initializationv
     public static GameSingelton Instance
     {
@@ -32,15 +36,23 @@ public class GameSingelton : MonoBehaviour {
     private void Awake()
     {
         // if the singleton has't been initialized yet
-        if (instance != null && instance != this)
+        if (first)
         {
             Destroy(this.gameObject);
         }
+        if (instance != null && instance != this)
+        {
+            Destroy(this.gameObject);
+            return;
+        }
         instance = this;
+        first = true;
         DontDestroyOnLoad(this.gameObject);
     }
     void Start()
     {
+        ButtonMenu = false;
+        ButtonRestart = false;
         resetVariables();
         StartCoroutine(LoadYourSceneAsync((int)sceneAllowed.MainMenu));
     }
@@ -60,17 +72,19 @@ public class GameSingelton : MonoBehaviour {
         if (start)
         {
             DrainHealth();
+            ButtonMenu = false;
+            ButtonRestart= false;
         }
         if (!start)
         {
             //stop "update" and show menu for restart and going to Menu
-            if (Input.GetKeyDown(KeyCode.Escape))
+            if (ButtonMenu)
             {
                 resetVariables();
                 start = false;
                 UnityEngine.SceneManagement.SceneManager.LoadScene((int)sceneAllowed.MainMenu);
             }
-            if (Input.anyKeyDown && !Input.GetKeyDown(KeyCode.Escape))
+            if (ButtonRestart)
             {
                 resetVariables();
                 start = true;
@@ -87,6 +101,8 @@ public class GameSingelton : MonoBehaviour {
         PlayerHealth = PlayerMaxHealth;
         PlayerPoint = 0;
         distance = 0;
+        ButtonMenu = false;
+        ButtonRestart = false;
     }
 
     public void Distance(uint dis)
