@@ -12,7 +12,12 @@ public class WaterDrop : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+		float x = Input.GetAxis ("Horizontal") * Time.deltaTime * 20f;
+		transform.Translate (-x, 0, 0);
+
+		if (transform.position.x < -20 || transform.position.y < -20) {
+			Destroy (this.gameObject);
+		}
 	}
 
     private void OnCollisionEnter(Collision collision)
