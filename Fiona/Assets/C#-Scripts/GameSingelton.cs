@@ -17,7 +17,8 @@ public class GameSingelton : MonoBehaviour {
     public float TotalDistance { get; private set; }
     public int PlayerPoint { get; private set; }
     public float PlayerHealth { get; private set; }
-    
+    public const float PlayerMaxHealth = 100;
+
     public bool start;
     // Use this for initializationv
     public static GameSingelton Instance
@@ -60,14 +61,13 @@ public class GameSingelton : MonoBehaviour {
         {
             DrainHealth();
         }
-        if (!start && UnityEngine.SceneManagement.SceneManager.GetActiveScene().name =="Paul" )
+        if (!start)
         {
-            start = false;
-
             //stop "update" and show menu for restart and going to Menu
             if (Input.GetKeyDown(KeyCode.Escape))
             {
                 resetVariables();
+                start = false;
                 UnityEngine.SceneManagement.SceneManager.LoadScene((int)sceneAllowed.MainMenu);
             }
             if (Input.anyKeyDown && !Input.GetKeyDown(KeyCode.Escape))
@@ -77,13 +77,14 @@ public class GameSingelton : MonoBehaviour {
                 UnityEngine.SceneManagement.SceneManager.LoadScene((int)sceneAllowed.Game);
             }
         }
-        Debug.Log(/**"Points "+PlayerPoint+**/"Health  "+PlayerHealth);
+        if(start)
+            Debug.Log(/**"Points "+PlayerPoint+**/"Health  "+PlayerHealth);
     }
 
     private void resetVariables()
     {
         time = 0;
-        PlayerHealth = 100;
+        PlayerHealth = PlayerMaxHealth;
         PlayerPoint = 0;
         distance = 0;
     }
@@ -96,7 +97,7 @@ public class GameSingelton : MonoBehaviour {
     public void DrainHealth()
     {
         PlayerHealth -= DRAIN_RATE;
-        if (PlayerHealth <= 0) start = false;
+        if (PlayerHealth <= 0) { start = false; }
     }
     public void RestoreHealth(float h) { PlayerHealth += h; }
 
