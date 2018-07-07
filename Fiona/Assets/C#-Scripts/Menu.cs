@@ -9,6 +9,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
+
 public class Menu : MonoBehaviour
 {
     //Make sure to attach these Buttons in the Inspector

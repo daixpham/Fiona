@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
 using System.Text;
+using UnityEngine.UI;
 
 public class GameSingelton : MonoBehaviour {
 
@@ -16,7 +17,7 @@ public class GameSingelton : MonoBehaviour {
     public float TotalDistance { get; private set; }
     public int PlayerPoint { get; private set; }
     public float PlayerHealth { get; private set; }
-
+    
     public bool start;
     // Use this for initializationv
     public static GameSingelton Instance
@@ -39,8 +40,9 @@ public class GameSingelton : MonoBehaviour {
     }
     void Start()
     {
+       
         resetVariables();
-        StartCoroutine(LoadYourSceneAsync(1));
+        StartCoroutine(LoadYourSceneAsync((int)sceneAllowed.MainMenu));
     }
 
     private void FixedUpdate()
@@ -51,9 +53,11 @@ public class GameSingelton : MonoBehaviour {
     void Update()
     {
         //get Player 
-        //PlayerPoint++;
         if (start)
-        { DrainHealth(); }
+        {
+            DrainHealth();
+            PlayerPoint++;
+        }
         if (!start && UnityEngine.SceneManagement.SceneManager.GetActiveScene().name =="Paul" )
         {
             start = false;
@@ -77,7 +81,7 @@ public class GameSingelton : MonoBehaviour {
     private void resetVariables()
     {
         time = 0;
-        PlayerHealth = 3;
+        PlayerHealth = 100;
         PlayerPoint = 0;
         distance = 0;
     }
@@ -104,5 +108,5 @@ public class GameSingelton : MonoBehaviour {
             yield return null;
         }
     }
-	
+
 }
