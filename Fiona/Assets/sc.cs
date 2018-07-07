@@ -14,8 +14,6 @@ public class sc : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		float x = Input.GetAxis ("Horizontal") * Time.deltaTime * maxSpeed;
-		float y = Input.GetAxis ("Vertical") * Time.deltaTime * maxJumpHeight;
-
-		transform.Translate (x, y, 0);
+		transform.Translate (x, 0, 0);
 	}
 }

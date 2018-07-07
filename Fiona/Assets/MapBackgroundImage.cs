@@ -5,17 +5,18 @@ using UnityEngine;
 public class MapBackgroundImage : MonoBehaviour {
 	[SerializeField] private GameObject bg01;
 	[SerializeField] private GameObject bg02;
-	[SerializeField] private GameObject player;
+	private GameObject player;
 	[SerializeField] private GameObject playerCam;
 	[SerializeField] private GameObject background;
 	private float fieldOfView;
 	private float offset;
 	// Use this for initialization
 	void Start () {
+		player =GameObject.FindGameObjectWithTag("Player").transform.GetChild(0).gameObject;
 		Camera tmp = playerCam.GetComponent<Camera> ();
 		fieldOfView = tmp.fieldOfView;
 		offset = bg02.transform.position.x - bg01.transform.position.x;
-		Debug.Log (bg02.transform.position.x+" "+ bg01.transform.position.x +" Offset: "+offset);
+		//Debug.Log (bg02.transform.position.x+" "+ bg01.transform.position.x +" Offset: "+offset);
 //		bg01.transform.position.x = offset + bg02.transform.position.x;
 
 	}
