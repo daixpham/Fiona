@@ -32,12 +32,11 @@ public class HealthBar : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-<<<<<<< Updated upstream
         float currentHP = GameSingelton.PlayerHealth;
-=======
 		currentHP = GameSingelton.Instance.PlayerHealth;
 		Debug.Log (currentHP);
->>>>>>> Stashed changes
+
+
         if ( currentHP> 0) {
 			healthbar.value = currentHP;
 			Image image = handle.GetComponent<Image> ();
