@@ -66,7 +66,6 @@ public class MapScript : MonoBehaviour {
 	}
 
 	void initialize(){
-		totalTileCount++;
 		int random = (int)Random.Range (0, OasisTiles.Length-1);
 		GameObject firstTile = Instantiate (OasisTiles [1], new Vector3 (currentTilePos*tileSize, 0, 0), Quaternion.identity);
 		firstTile.transform.parent = map.transform;

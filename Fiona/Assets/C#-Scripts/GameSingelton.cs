@@ -75,7 +75,6 @@ public class GameSingelton : MonoBehaviour {
                 UnityEngine.SceneManagement.SceneManager.LoadScene((int)sceneAllowed.Game);
             }
         }
-        Debug.Log(/**"Points "+PlayerPoint+**/"Health  "+PlayerHealth);
     }
 
     private void resetVariables()
