@@ -19,7 +19,7 @@ public class GameSingelton : MonoBehaviour {
     public float PlayerHealth { get; private set; }
     public const float PlayerMaxHealth = 100;
 
-    public bool start;
+    public static bool start;
     // Use this for initializationv
     public static GameSingelton Instance
     {
@@ -77,7 +77,6 @@ public class GameSingelton : MonoBehaviour {
                 UnityEngine.SceneManagement.SceneManager.LoadScene((int)sceneAllowed.Game);
             }
         }
-
         if(start)
             Debug.Log(/**"Points "+PlayerPoint+**/"Health  "+PlayerHealth);
     }
