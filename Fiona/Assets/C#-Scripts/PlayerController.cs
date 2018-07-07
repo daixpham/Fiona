@@ -24,7 +24,6 @@ public class PlayerController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		float jump = Input.GetAxis ("Vertical");
-		Debug.Log (jump);
 		float y_ = Animation.transform.rotation.y;
         if (Input.GetKey(KeyCode.D))
         {
@@ -77,7 +76,6 @@ public class PlayerController : MonoBehaviour {
         if (collision.gameObject.tag == "Ground") {
             grounded = true;
         }
-		Debug.Log (grounded);
     }
 
     private void OnCollisionExit2D(Collision2D collision)

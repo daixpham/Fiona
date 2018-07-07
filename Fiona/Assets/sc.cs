@@ -12,6 +12,7 @@ public class sc : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+		float x = Input.GetAxis ("Horizontal") * Time.deltaTime * 20f;
+		transform.Translate (-x, 0, 0);
 	}
 }

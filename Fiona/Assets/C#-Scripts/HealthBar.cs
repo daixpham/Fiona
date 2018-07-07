@@ -9,6 +9,8 @@ public class HealthBar : MonoBehaviour {
 	private GameObject handle;
 	private Color32 color1,color2;
 	private GameObject player;
+	private float currentHP;
+
 
 	void Start () {
 		// Get Player
@@ -21,13 +23,23 @@ public class HealthBar : MonoBehaviour {
 		GameObject tmpObj = healthbar.transform.GetChild (0).gameObject;
 		Image tmpImg = tmpObj.GetComponent<Image> ();
 		color2 = tmpImg.color;
+		tmpObj = healthbar.transform.GetChild (1).gameObject.transform.GetChild (0).gameObject;
+		tmpImg = tmpObj.GetComponent<Image> ();
+		color1 = tmpImg.color;
+
+		currentHP = GameSingelton.PlayerHealth;
 	}
 
 	// Update is called once per frame
 	void Update () {
         float currentHP = GameSingelton.PlayerHealth;
+		Debug.Log (currentHP);
+
+
         if ( currentHP> 0) {
 			healthbar.value = currentHP;
+			Image image = handle.GetComponent<Image> ();
+			image.color = color1;
 		} else {
 			Image image = handle.GetComponent<Image> ();
 			image.color = color2;

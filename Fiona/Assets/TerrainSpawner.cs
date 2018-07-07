@@ -15,7 +15,6 @@ public class TerrainSpawner : MonoBehaviour {
 		player = GameObject.FindGameObjectWithTag("Player");
 		GameObject first = Instantiate (tileList [0], new Vector3 (0, 0, 0), Quaternion.Euler (270,90,0));
 		first.transform.parent = map.transform;
-		first.AddComponent (typeof(MeshCollider)) ;
 		first.tag = "Ground";
 		createdList.Add (first);
 	}
@@ -37,11 +36,10 @@ public class TerrainSpawner : MonoBehaviour {
 
 	void addTile(){
 		int random = (int)Random.Range (0, tileList.Length);
-		GameObject obj = Instantiate (tileList [random], new Vector3 ((createdList[createdList.Count-1].transform.position.x+tileSize), 0, 0), Quaternion.Euler (270,90,0));
-
-		obj.transform.parent = map.transform;
+        GameObject obj = GameObject.Instantiate(tileList[random], new Vector3((createdList[createdList.Count - 1].transform.position.x + tileSize), 0, 0), Quaternion.Euler(270, 90, 0)) as GameObject;
+    
+        obj.transform.parent = map.transform;
 		createdList.Add (obj);
-		obj.AddComponent (typeof(MeshCollider)) ;
 		obj.tag = "Ground";
 	}
 
