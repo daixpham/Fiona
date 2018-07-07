@@ -20,6 +20,7 @@ public class Score : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
+        GameSingelton.Instance.UpdateScore();
         score = GameSingelton.Instance.PlayerPoint;
 
         scoreUpdate();
