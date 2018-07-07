@@ -9,10 +9,11 @@ public class Score : MonoBehaviour
 
 
     public Text scoreText;
+    public Text endScore;
     private int score;
     // Use this for initialization
     public Button m_Menu, m_Restart;
-
+    public Image img;
     void Start()
     {
         Button menu = m_Menu.GetComponent<Button>();
@@ -21,6 +22,9 @@ public class Score : MonoBehaviour
         scoreUpdate();
         menu.onClick.AddListener(TaskOnClick);
         restart.onClick.AddListener(TaskOnClick);
+
+        endScore.gameObject.SetActive(false);
+        img.gameObject.SetActive(false);
         menu.gameObject.SetActive(false);
         restart.gameObject.SetActive(false);
     }
@@ -32,14 +36,17 @@ public class Score : MonoBehaviour
         if (GameSingelton.start)
         {
             GameSingelton.Instance.UpdateScore();
-            score = GameSingelton.Instance.PlayerPoint;
-
             scoreUpdate();
         }
         else
         {
             m_Menu.gameObject.SetActive(true);
             m_Restart.gameObject.SetActive(true);
+            endScore.gameObject.SetActive(true);
+            img.gameObject.SetActive(true);
+
+            scoreUpdate();
+            endScore.text = "Your Score was: " + score;
         }
 
         scoreUpdate();
@@ -48,6 +55,7 @@ public class Score : MonoBehaviour
 
     void scoreUpdate()
     {
+        score = GameSingelton.Instance.PlayerPoint;
         scoreText.text = "Score: " + score;
     }
 
