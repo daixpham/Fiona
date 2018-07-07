@@ -321,18 +321,13 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &1796292622
+--- !u!1001 &1494568314
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 224256724440926032, guid: 2f8ecaf73264ba2449d5e46753a52e07,
-        type: 2}
-      propertyPath: m_RootOrder
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 224256724440926032, guid: 2f8ecaf73264ba2449d5e46753a52e07,
         type: 2}
       propertyPath: m_LocalPosition.x
@@ -423,9 +418,20 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1581232271440386, guid: 2f8ecaf73264ba2449d5e46753a52e07, type: 2}
-      propertyPath: m_Name
-      value: Menu
+    - target: {fileID: 114332881011734410, guid: 2f8ecaf73264ba2449d5e46753a52e07,
+        type: 2}
+      propertyPath: m_Texture
+      value: 
+      objectReference: {fileID: 2800000, guid: 8b8c8cb9751b38943993d01208d6f5f2, type: 3}
+    - target: {fileID: 224158584808168252, guid: 2f8ecaf73264ba2449d5e46753a52e07,
+        type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 224158584808168252, guid: 2f8ecaf73264ba2449d5e46753a52e07,
+        type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 300
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2f8ecaf73264ba2449d5e46753a52e07, type: 2}

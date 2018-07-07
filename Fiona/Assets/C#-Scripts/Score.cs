@@ -11,9 +11,11 @@ public class Score : MonoBehaviour
     public Text scoreText;
     public Text endScore;
     private int score;
+    private bool first;
     // Use this for initialization
     public Button m_Menu, m_Restart;
     public Image img;
+    public RawImage Tutorial;
     void Start()
     {
         Button menu = m_Menu.GetComponent<Button>();
@@ -23,16 +25,27 @@ public class Score : MonoBehaviour
         menu.onClick.AddListener(TaskOnClick);
         restart.onClick.AddListener(TaskOnClick);
 
+
         endScore.gameObject.SetActive(false);
         img.gameObject.SetActive(false);
         menu.gameObject.SetActive(false);
         restart.gameObject.SetActive(false);
+        Tutorial.gameObject.SetActive(false);
+        if (GameSingelton.Tutorial)
+        {
+            Tutorial.gameObject.SetActive(true);
+        }
+ 
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        if (Input.GetKeyDown(KeyCode.Return) && GameSingelton.Tutorial)
+        {
+            GameSingelton.Tutorial  = false;
+            Tutorial.gameObject.SetActive(false);
+        }
         if (GameSingelton.start)
         {
             GameSingelton.Instance.UpdateScore();

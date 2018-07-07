@@ -14,7 +14,7 @@ public class Menu : MonoBehaviour
 {
     //Make sure to attach these Buttons in the Inspector
     public Button m_Start, m_Exit, m_Credits;
-    public Image imgCredits;
+    public RawImage imgCredits;
     public bool CreditsB { get; private set; }
     private Vector3 imgPos;
     void Start()

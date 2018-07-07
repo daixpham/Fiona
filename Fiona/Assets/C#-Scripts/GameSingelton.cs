@@ -22,7 +22,7 @@ public class GameSingelton : MonoBehaviour {
     public static bool start;
     public static bool ButtonMenu ;
     public static bool ButtonRestart ;
-
+    public static bool Tutorial = true;
     private static bool first;
     // Use this for initializationv
     public static GameSingelton Instance
