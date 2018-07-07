@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class MapScript : MonoBehaviour {
+
+	[SerializeField] private float maxSpeed = 100f;
+
+
 	[SerializeField] private GameObject player;
 	[SerializeField] private GameObject map;
 	[SerializeField] private GameObject[] tiles;
@@ -26,6 +30,17 @@ public class MapScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
+		float x = Input.GetAxis ("Horizontal") * Time.deltaTime * maxSpeed;
+		foreach (GameObject tile in tileList) {
+			tile.transform.Translate (-x, 0, 0);
+		}
+
+
+
+
+
+
 		if (tileList [0].transform.position.x < playerPos - tileSize * 2) {
 			Destroy (tileList [0]);
 			tileList.RemoveAt (0);
@@ -39,11 +54,11 @@ public class MapScript : MonoBehaviour {
 	void initialize(){
 		totalTileCount++;
 		int random = (int)Random.Range (0, OasisTiles.Length-1);
-		GameObject firstTile = Instantiate (OasisTiles [0], new Vector3 (currentTilePos*tileSize, 0, 0), Quaternion.identity);
+		GameObject firstTile = Instantiate (OasisTiles [1], new Vector3 (currentTilePos*tileSize, 0, 0), Quaternion.identity);
 		firstTile.transform.parent = map.transform;
 		tileList.Add (firstTile);
 
-		firstTile = Instantiate (OasisTiles [1], new Vector3 (currentTilePos*tileSize, 0, 0), Quaternion.identity);
+		firstTile = Instantiate (OasisTiles [random], new Vector3 ((tileList[tileList.Count-1].transform.position.x+tileSize), 0, 0), Quaternion.identity);
 		firstTile.transform.parent = map.transform;
 		tileList.Add (firstTile);
 

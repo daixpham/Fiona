@@ -343,6 +343,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94054bd3627ae2a438574636bb02c295, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxSpeed: 100
   player: {fileID: 82229858}
   map: {fileID: 416852639}
   tiles:
@@ -604,7 +605,6 @@ GameObject:
   m_Component:
   - component: {fileID: 416852641}
   - component: {fileID: 416852640}
-  - component: {fileID: 416852642}
   m_Layer: 0
   m_Name: World
   m_TagString: Untagged
@@ -632,24 +632,10 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1061602111}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &416852642
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 416852639}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 48d24a7592960234c973c8786c18b979, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxSpeed: 100
-  maxJumpHeight: 100
 --- !u!1 &562077629
 GameObject:
   m_ObjectHideFlags: 0
@@ -931,54 +917,6 @@ RectTransform:
   m_PrefabParentObject: {fileID: 224707990914560346, guid: 7649bfd02324911419e9f864d967556d,
     type: 2}
   m_PrefabInternal: {fileID: 698330615}
---- !u!1001 &1061602110
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 416852641}
-    m_Modifications:
-    - target: {fileID: 4448086590708408, guid: c67527ee9f926884094dc9c4e2ca785d, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 40
-      objectReference: {fileID: 0}
-    - target: {fileID: 4448086590708408, guid: c67527ee9f926884094dc9c4e2ca785d, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4448086590708408, guid: c67527ee9f926884094dc9c4e2ca785d, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4448086590708408, guid: c67527ee9f926884094dc9c4e2ca785d, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4448086590708408, guid: c67527ee9f926884094dc9c4e2ca785d, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4448086590708408, guid: c67527ee9f926884094dc9c4e2ca785d, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4448086590708408, guid: c67527ee9f926884094dc9c4e2ca785d, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4448086590708408, guid: c67527ee9f926884094dc9c4e2ca785d, type: 2}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 2113883506509474826, guid: c67527ee9f926884094dc9c4e2ca785d, type: 2}
-  m_ParentPrefab: {fileID: 100100000, guid: c67527ee9f926884094dc9c4e2ca785d, type: 2}
-  m_IsPrefabParent: 0
---- !u!4 &1061602111 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4448086590708408, guid: c67527ee9f926884094dc9c4e2ca785d,
-    type: 2}
-  m_PrefabInternal: {fileID: 1061602110}
 --- !u!1 &1330118430
 GameObject:
   m_ObjectHideFlags: 0
@@ -1255,24 +1193,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86bb051cc6db68b4580d35d7f941f44c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1656360491 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1581174587756768, guid: c67527ee9f926884094dc9c4e2ca785d,
-    type: 2}
-  m_PrefabInternal: {fileID: 1061602110}
---- !u!19719996 &1656360492
-TilemapCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1656360491}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
 --- !u!1 &1818605002
 GameObject:
   m_ObjectHideFlags: 0
