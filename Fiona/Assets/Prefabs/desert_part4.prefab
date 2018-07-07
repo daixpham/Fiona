@@ -26,7 +26,7 @@ GameObject:
   - component: {fileID: 65239362207086194}
   m_Layer: 0
   m_Name: desert_part4
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -37,13 +37,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1846982503573000}
-  m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+  m_LocalRotation: {x: -0.36120778, y: -0.52263945, z: -0.25955412, w: 0.7273298}
   m_LocalPosition: {x: 21.7, y: 0, z: 0}
   m_LocalScale: {x: 1500, y: 1500, z: 100}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -52.82, y: -71.4, z: 0}
 --- !u!23 &23672504313285406
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -96,8 +96,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.020570036, y: 0.031199265, z: 0.05627064}
-  m_Center: {x: 0.00003906886, y: 0.00432957, z: -0.00901031}
+  m_Size: {x: 0.02057004, y: 0.02057004, z: 0.0627064}
+  m_Center: {x: -0.02, y: 0, z: 0.02}
 --- !u!65 &65431358495245796
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -108,8 +108,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.020570036, y: 0.04, z: -0.06}
-  m_Center: {x: 0.000039068982, y: 0, z: -0.02}
+  m_Size: {x: 0.04, y: 0.02, z: -0.06}
+  m_Center: {x: -0.02, y: 0, z: -0.05}
 --- !u!135 &135556212908152902
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -121,4 +121,4 @@ SphereCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.006
-  m_Center: {x: 0.00103, y: 0.004, z: 0.001226}
+  m_Center: {x: -0.02, y: 0.00103, z: 0.001226}

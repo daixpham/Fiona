@@ -21,7 +21,6 @@ GameObject:
   - component: {fileID: 4306679589641784}
   - component: {fileID: 33922320355719164}
   - component: {fileID: 23328991688269226}
-  - component: {fileID: 64209207596399410}
   - component: {fileID: 65411593485339942}
   m_Layer: 0
   m_Name: desert_part3
@@ -36,13 +35,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1501261774589154}
-  m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1500, y: 1500, z: 100}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!23 &23328991688269226
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -85,20 +84,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1501261774589154}
   m_Mesh: {fileID: 4300000, guid: 698752b668c64f9489501dc27ac0e059, type: 3}
---- !u!64 &64209207596399410
-MeshCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1501261774589154}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 14
-  m_SkinWidth: 0.01
-  m_Mesh: {fileID: 4300000, guid: 698752b668c64f9489501dc27ac0e059, type: 3}
 --- !u!65 &65411593485339942
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -109,5 +94,5 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.020657396, y: 0.040186293, z: 0.113953546}
-  m_Center: {x: -0.000004610978, y: -0.000089027904, z: -0.03245883}
+  m_Size: {x: 0.04, y: 0.02, z: -0.06}
+  m_Center: {x: -0.02, y: 0, z: -0.05}
