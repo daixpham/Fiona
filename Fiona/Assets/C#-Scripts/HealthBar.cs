@@ -27,13 +27,12 @@ public class HealthBar : MonoBehaviour {
 		tmpImg = tmpObj.GetComponent<Image> ();
 		color1 = tmpImg.color;
 
-		currentHP = GameSingelton.Instance.PlayerHealth;
+		currentHP = GameSingelton.PlayerHealth;
 	}
 
 	// Update is called once per frame
 	void Update () {
         float currentHP = GameSingelton.PlayerHealth;
-		currentHP = GameSingelton.Instance.PlayerHealth;
 		Debug.Log (currentHP);
 
 
