@@ -40,7 +40,7 @@ public class GameSingelton : MonoBehaviour {
         //time++;
         //PlayerPoint = 0;
         //PlayerHealth = 100;
-        //StartCoroutine(LoadYourSceneAsync());
+        StartCoroutine(LoadYourSceneAsync());
     }
     void Update()
     {
