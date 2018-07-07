@@ -9,7 +9,7 @@ public class Score : MonoBehaviour {
 
     public Text scoreText;
     private int score;
-
+    public Text MenuEscapeScore;
     // Use this for initialization
     void Start()
     {
@@ -20,13 +20,26 @@ public class Score : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        GameSingelton.Instance.UpdateScore();
-        score = GameSingelton.Instance.PlayerPoint;
+        
+        if (GameSingelton.start)
+        {
+            GameSingelton.Instance.UpdateScore();
+            score = GameSingelton.Instance.PlayerPoint;
+ 
+            scoreUpdate();
+        }
+
         scoreUpdate();
+        onDeath();
     }
 
     void scoreUpdate()
     {
         scoreText.text = "Score: " + score;
+    }
+
+    void onDeath()
+    {
+     //   MenuEscapeScore.text = "Restart Press Any Key \n Main Menu Escape \n your score was :" + score;
     }
 }

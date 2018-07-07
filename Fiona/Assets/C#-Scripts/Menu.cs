@@ -58,7 +58,7 @@ public class Menu : MonoBehaviour
         {
             print("Start");
             SceneManager.LoadScene(2);
-            GameSingelton.Instance.start = true;
+            GameSingelton.start = true;
         }
         Debug.Log("You have clicked the button!");
     }
