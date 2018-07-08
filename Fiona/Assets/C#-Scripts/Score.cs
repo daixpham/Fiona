@@ -65,13 +65,11 @@ public class Score : MonoBehaviour
             img.gameObject.SetActive(true);
 
             scoreUpdate();
+            if(Input.GetKeyDown(KeyCode.Return))
+                GameSingelton.ButtonRestart = true;
             endScore.text = "Your Score was: " + score;
         }
-
-        if (mRestart)
-        {
-            GameSingelton.ButtonRestart = true;
-        }
+        
         scoreUpdate();
 
     }
@@ -86,7 +84,7 @@ public class Score : MonoBehaviour
     {
         if (EventSystem.current.currentSelectedGameObject.name.ToString().Equals("Restart") || Input.GetKeyDown(KeyCode.Return))
         {
-            print("AAAAAAAAAAAAAAAAAAAAAAAAAAA");
+//            print("AAAAAAAAAAAAAAAAAAAAAAAAAAA");
             GameSingelton.ButtonRestart = true;
         }
         if (EventSystem.current.currentSelectedGameObject.name.ToString().Equals("Menu") || Input.GetKeyDown(KeyCode.Escape))

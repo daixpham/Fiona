@@ -23,9 +23,9 @@ public class Enemy : MonoBehaviour {
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Player")
-        {
-            print("AAAAAAAAAAAAAAAAAAAA");
-        }
+        //if (collision.gameObject.tag == "Player")
+        //{
+        //    print("AAAAAAAAAAAAAAAAAAAA");
+        //}
     }
 }

@@ -26,7 +26,7 @@ public class WaterDrop : MonoBehaviour {
     {
         if (collision.gameObject.tag == "Player")
         {
-            print(collision.gameObject.name);
+            //print(collision.gameObject.name);
             GameSingelton.Instance.RestoreHealth(20f);
             Object.Destroy(this.gameObject);
 			int numPoints = 10;
