@@ -29,8 +29,6 @@ public class Menu : MonoBehaviour
         Button btn1 = m_Start.GetComponent<Button>();
         Button btn2 = m_Exit.GetComponent<Button>();
         Button btn3 = m_Credits.GetComponent<Button>();
-        imgPos = imgCredits.transform.position;
-        changeAlpha(0);
         //Calls the TaskOnClick/TaskWithParameters method when you click the Button
         btn1.onClick.AddListener(TaskOnClick);
         //   btn2.onClick.AddListener(delegate { TaskWithParameters("Hello"); });
@@ -45,7 +43,6 @@ public class Menu : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Return))
         {
-            changeAlpha(0);
   //          print("Return");
         }
     }
@@ -72,23 +69,6 @@ public class Menu : MonoBehaviour
     {
         //Output this to console when the Button is clicked
         Debug.Log(message);
-    }
-    void changeAlpha(int i)
-    {
-        Color c = imgCredits.color;
-        c.a = i;
-        imgCredits.color = c;
-        if (i == 1)
-        {
-            imgCredits.transform.position = imgPos;
-            CreditsB = true;
-        }
-        else
-        {
-            CreditsB = false;
-            imgCredits.transform.position = new Vector3(-100,-100,0);
-        }
-
     }
 
 
