@@ -586,7 +586,7 @@ GameObject:
   - component: {fileID: 65784367034297954}
   m_Layer: 4
   m_Name: WaterBasicDaytime 1
-  m_TagString: Untagged
+  m_TagString: Oasis
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

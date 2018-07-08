@@ -627,6 +627,12 @@ Prefab:
       propertyPath: m_Name
       value: 'Terrain '
       objectReference: {fileID: 0}
+    - target: {fileID: 114177179612029780, guid: 3fd3bcc80b1f768448f09f23e8fc2f47,
+        type: 2}
+      propertyPath: tileList.Array.data[6]
+      value: 
+      objectReference: {fileID: 1162347890599332, guid: b630ef02b1273a34ea0a81f1470874a4,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3fd3bcc80b1f768448f09f23e8fc2f47, type: 2}
   m_IsPrefabParent: 0

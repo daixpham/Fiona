@@ -10,6 +10,8 @@ TagManager:
   - MainMenu
   - SettingsMenu
   - CreditsMenu
+  - CollisionObject
+  - Oasis
   layers:
   - Default
   - TransparentFX
