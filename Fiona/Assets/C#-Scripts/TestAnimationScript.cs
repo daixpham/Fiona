@@ -51,6 +51,7 @@ public class TestAnimationScript : MonoBehaviour {
 			w_pressed = true;
 		}
 
+
 	}
 
 
