@@ -57,6 +57,7 @@ public class TerrainSpawner : MonoBehaviour {
 			if (tileTypeList [tileTypeList.Count - 1] == tileTypeList [tileTypeList.Count - 2]) {
 				while ( random== tileTypeList [tileTypeList.Count - 1]) {
 					random = (int)Random.Range (0, tileList.Length);
+					tileTypeList.RemoveAt (0);
 				}
 			}
 		}
