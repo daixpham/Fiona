@@ -10,7 +10,7 @@ public class HealthBar : MonoBehaviour {
 	private Color32 color1,color2;
 	private GameObject player;
 	private float currentHP;
-
+	[SerializeField] private Text hpText;
 
 	void Start () {
 		// Get Player
@@ -34,11 +34,11 @@ public class HealthBar : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         float currentHP = GameSingelton.PlayerHealth;
-
         if ( currentHP> 0) {
 			healthbar.value = currentHP;
 			Image image = handle.GetComponent<Image> ();
 			image.color = color1;
+			hpText.text = GameSingelton.PlayerHealth+" / "+GameSingelton.PlayerMaxHealth;
 		} else {
 			Image image = handle.GetComponent<Image> ();
 			image.color = color2;
