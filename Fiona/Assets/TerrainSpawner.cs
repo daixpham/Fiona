@@ -12,12 +12,12 @@ public class TerrainSpawner : MonoBehaviour {
     private float X, Y, Z;
 	// Use this for initialization
 	void Start () {
-        X = 270;
-        Y = -180;
+        X = -90;
+        Y = 180;
         Z = 0;
 		createdList= new List<GameObject>();
 		player = GameObject.FindGameObjectWithTag("Player");
-		GameObject first = Instantiate (tileList [0], new Vector3 (10,0, 0), Quaternion.Euler (X, Y, Z));
+		GameObject first = Instantiate (tileList [0], new Vector3 (0,0, 0), Quaternion.Euler (X, Y, Z));
 		first.transform.parent = map.transform;
 		first.tag = "Ground";
 		createdList.Add (first);
