@@ -13,12 +13,14 @@ public class TerrainSpawner : MonoBehaviour {
     private bool oasis;
     private int sameLimit = 2;
     private int prevTile;
+	private List <int> tileTypeList;
 	// Use this for initialization
 	void Start () {
         X = 0;
         Y = 180;
         Z = 0;
 		createdList= new List<GameObject>();
+		tileTypeList= new List<int>();
 		player = GameObject.FindGameObjectWithTag("Player");
 		GameObject first = Instantiate (tileList [tileList.Length-1], new Vector3 (0,0, 0), Quaternion.Euler (X, Y, Z));
 		first.transform.parent = map.transform;
@@ -50,6 +52,15 @@ public class TerrainSpawner : MonoBehaviour {
 
 	void addTile(){
 		int random = (int)Random.Range (0, tileList.Length);
+		tileTypeList.Add (random);
+		if (tileTypeList.Count > 2) {
+			if (tileTypeList [tileTypeList.Count - 1] == tileTypeList [tileTypeList.Count - 2]) {
+				while ( random== tileTypeList [tileTypeList.Count - 1]) {
+					random = (int)Random.Range (0, tileList.Length);
+					tileTypeList.RemoveAt (0);
+				}
+			}
+		}
 		GameObject obj = Instantiate (tileList [random], new Vector3 ((createdList[createdList.Count-1].transform.position.x+tileSize), 0, 0), Quaternion.Euler (X, Y, Z));
     //    GameObject obj = GameObject.Instantiate(tileList[random], new Vector3((createdList[createdList.Count - 1].transform.position.x + tileSize), 0, 0), Quaternion.Euler(270, 90, 0)) as GameObject;
     
