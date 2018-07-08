@@ -67,7 +67,7 @@ public class TestAnimationScript : MonoBehaviour {
 
 	private void OnCollisionEnter(Collision collision)
 	{
-		if (collision.gameObject.tag == "Ground")
+		if (collision.gameObject.tag == "Ground"|| collision.gameObject.tag == "CollisionObject")
 		{
 			grounded = true;
 
@@ -80,7 +80,7 @@ public class TestAnimationScript : MonoBehaviour {
 
     private void OnCollisionExit(Collision collision)
     {
-        if (collision.gameObject.tag == "Ground")
+        if (collision.gameObject.tag == "Ground" || collision.gameObject.tag == "CollisionObject")
         {
             grounded = false;
 

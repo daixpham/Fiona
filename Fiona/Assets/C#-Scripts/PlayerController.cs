@@ -62,7 +62,8 @@ public class PlayerController : MonoBehaviour {
     {
         if (collision.gameObject.tag == "CollisionObject")
         {
-            GameSingelton.Instance.move = new Vector3(5f,0,0);
+            print(collision.gameObject.tag);
+            GameSingelton.Instance.move = new Vector3(GameSingelton.SPEED,0,0);
         }
     }
 		

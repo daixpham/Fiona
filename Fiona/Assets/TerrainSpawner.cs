@@ -30,7 +30,7 @@ public class TerrainSpawner : MonoBehaviour {
 	void Update ()
     {
 		if (GameSingelton.PlayerHealth > 0) {
-			GameSingelton.Instance.move= new Vector3(Time.deltaTime * 5f,0,0);
+			//GameSingelton.Instance.move= new Vector3(Time.deltaTime * 5f, 0, 0);
 			foreach (GameObject tile in createdList) {
 				tile.transform.Translate (GameSingelton.Instance.move);
                 
