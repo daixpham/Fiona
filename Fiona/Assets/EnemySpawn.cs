@@ -21,6 +21,8 @@ public class EnemySpawn : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
+        float random = Random.Range(maxSpawnRate, minSpawnRate);
+
 			if (secs > 0) {
 				secs -= Time.deltaTime;
                 waterspawn -= Time.deltaTime;
@@ -39,5 +41,4 @@ public class EnemySpawn : MonoBehaviour {
                 obj2.transform.parent = transform;
 		     }
         }
-	}
 }
