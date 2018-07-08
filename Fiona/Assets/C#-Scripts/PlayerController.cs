@@ -8,7 +8,7 @@ public class PlayerController : MonoBehaviour {
     [SerializeField] private GameObject player;
     [SerializeField] private Rigidbody rigidBody;
     [SerializeField] private float movement = 0f;
-    bool regen = false;
+
     public bool grounded=true;
     public bool w_pressed;
     GameObject Animation;
@@ -23,22 +23,24 @@ public class PlayerController : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
-		if (GameSingelton.PlayerHealth > 0) {
-			float jump = Input.GetAxis ("Vertical");
-			float y_ = Animation.transform.rotation.y;
-			tmp.SetInteger ("State", 1);
+	void Update ()
+    {
+        if (GameSingelton.PlayerHealth > 0)
+        {
+            float jump = Input.GetAxis("Vertical");
+            float y_ = Animation.transform.rotation.y;
+            tmp.SetInteger("State", 1);
 
-            if (regen)
-                GameSingelton.Instance.RestoreHealth(2f);
-		
-			if (jump != 0 && grounded && !w_pressed) {
+            
+			if (jump != 0 && grounded && !w_pressed)
+            {
 				w_pressed = true;
 				rigidBody.AddForce (new Vector3 (0, max_jumpPower, 0), ForceMode.Impulse);
 			}
         
 
-			if (jump == 0) {
+			if (jump == 0)
+            {
 				w_pressed = false;
 			}
 		} 
@@ -73,14 +75,7 @@ public class PlayerController : MonoBehaviour {
     {
         if (other.gameObject.tag == "Oasis")
         {
-            regen = true;
-        }
-    }
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.gameObject.tag == "Oasis")
-        {
-            regen = false;
+            GameSingelton.Instance.RestoreHealth(10f);
         }
     }
 
