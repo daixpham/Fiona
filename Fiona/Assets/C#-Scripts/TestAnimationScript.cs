@@ -34,7 +34,7 @@ public class TestAnimationScript : MonoBehaviour {
 
 			controller.SetBool("IsJumping", true);
 
-			rigidBody.AddForce(new Vector3(0, 20f,0), ForceMode.Impulse);
+			rigidBody.AddForce(new Vector3(0, 3f,0), ForceMode.Impulse);
 
 
 		}
