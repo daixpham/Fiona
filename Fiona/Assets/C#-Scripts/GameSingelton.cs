@@ -51,6 +51,7 @@ public class GameSingelton : MonoBehaviour {
         instance = this;
         first = true;
         DontDestroyOnLoad(this.gameObject);
+        Application.targetFrameRate=60;
     }
     void Start()
     {

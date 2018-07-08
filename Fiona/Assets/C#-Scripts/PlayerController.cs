@@ -79,4 +79,12 @@ public class PlayerController : MonoBehaviour {
         }
     }
 
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.tag == "Oasis")
+        {
+            GameSingelton.Instance.RestoreHealth(10f);
+        }
+    }
+
 }
