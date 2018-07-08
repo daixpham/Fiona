@@ -17,13 +17,12 @@ public class Menu : MonoBehaviour
 	[SerializeField] GameObject mainMenu;
 	[SerializeField] GameObject settingsMenu;
 	[SerializeField] GameObject creditsMenu;
+	[SerializeField] GameObject tutorialMenu;
 	[SerializeField] Text difficultyText;
 	[SerializeField] Slider slider;
     //Make sure to attach these Buttons in the Inspector
     public Button m_Start, m_Exit, m_Credits;
-    public RawImage imgCredits;
     public bool CreditsB { get; private set; }
-    private Vector3 imgPos;
     void Start()
     {
         Button btn1 = m_Start.GetComponent<Button>();
@@ -80,6 +79,11 @@ public class Menu : MonoBehaviour
 	public void openCredits(){
 		mainMenu.SetActive (false);
 		creditsMenu.SetActive (true);
+	}
+
+	public void openTutorial(){
+		mainMenu.SetActive (false);
+		tutorialMenu.SetActive (true);
 	}
 
 	public void startGame(){
