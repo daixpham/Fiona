@@ -20,7 +20,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Endless.unity
     guid: b255ae868d2f7fa42b1f9d701cd26a29
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Endless3.unity
     guid: b9ff663fad6ecf74488354776772b467
+  - enabled: 1
+    path: Assets/Scenes/Endless4.unity
+    guid: 5b1cf310dade78746947a0841d3b2dbe
   m_configObjects: {}

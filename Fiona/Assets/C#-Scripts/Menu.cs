@@ -16,6 +16,7 @@ public class Menu : MonoBehaviour
 
 	[SerializeField] GameObject mainMenu;
 	[SerializeField] GameObject settingsMenu;
+	[SerializeField] GameObject creditsMenu;
 	[SerializeField] Text difficultyText;
 	[SerializeField] Slider slider;
     //Make sure to attach these Buttons in the Inspector
@@ -57,12 +58,6 @@ public class Menu : MonoBehaviour
 //            print("Quit");
             Application.Quit();
         }
-        if (EventSystem.current.currentSelectedGameObject.name.ToString().Equals("Credits"))
-        {
-//            print("Credits");
-            //load Credits
-            changeAlpha(1);
-        }
         if (EventSystem.current.currentSelectedGameObject.name.ToString().Equals("Start"))
         {
 //            print("Start");
@@ -103,9 +98,26 @@ public class Menu : MonoBehaviour
 		settingsMenu.SetActive (true);
 	}
 
+	public void openCredits(){
+		mainMenu.SetActive (false);
+		creditsMenu.SetActive (true);
+	}
+
+	public void startGame(){
+		print("Start");
+		SceneManager.LoadScene(2);
+		GameSingelton.start = true;
+	}
+
 	public void openMainMenu(){
 		mainMenu.SetActive (true);
 		settingsMenu.SetActive (false);
+		creditsMenu.SetActive (false);
+	}
+
+	public void closeGame(){
+		print("Quit");
+		Application.Quit();
 	}
 
 	public void difficultyChange(){
@@ -120,13 +132,13 @@ public class Menu : MonoBehaviour
 			GameSingelton.PlayerMaxHealth = 100;
 			GameSingelton.scoreMult = 2;
 		}
-			
+
 		else{
 			difficultyText.text = "Schwierigkeitsgrad: Schwer";
 			GameSingelton.PlayerMaxHealth = 50;
 			GameSingelton.scoreMult = 3;
 		}
-			
+
 		Debug.Log (difficultyText);
 	}
 }
