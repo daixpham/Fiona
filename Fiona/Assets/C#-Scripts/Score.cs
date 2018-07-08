@@ -16,6 +16,9 @@ public class Score : MonoBehaviour
     public Button m_Menu, m_Restart;
     public Image img;
     public RawImage Tutorial;
+    bool mRestart;
+    bool mMenu;
+
     void Start()
     {
         Button menu = m_Menu.GetComponent<Button>();
@@ -25,6 +28,8 @@ public class Score : MonoBehaviour
         menu.onClick.AddListener(TaskOnClick);
         restart.onClick.AddListener(TaskOnClick);
 
+        mMenu = false;
+        mRestart = false;
 
         endScore.gameObject.SetActive(false);
         img.gameObject.SetActive(false);
@@ -54,6 +59,7 @@ public class Score : MonoBehaviour
         else
         {
             m_Menu.gameObject.SetActive(true);
+
             m_Restart.gameObject.SetActive(true);
             endScore.gameObject.SetActive(true);
             img.gameObject.SetActive(true);
@@ -62,6 +68,10 @@ public class Score : MonoBehaviour
             endScore.text = "Your Score was: " + score;
         }
 
+        if (mRestart)
+        {
+            GameSingelton.ButtonRestart = true;
+        }
         scoreUpdate();
 
     }
@@ -74,8 +84,9 @@ public class Score : MonoBehaviour
 
     void TaskOnClick()
     {
-        if (EventSystem.current.currentSelectedGameObject.name.ToString().Equals("Restart")||Input.GetKeyDown(KeyCode.Return))
+        if (EventSystem.current.currentSelectedGameObject.name.ToString().Equals("Restart") || Input.GetKeyDown(KeyCode.Return))
         {
+            print("AAAAAAAAAAAAAAAAAAAAAAAAAAA");
             GameSingelton.ButtonRestart = true;
         }
         if (EventSystem.current.currentSelectedGameObject.name.ToString().Equals("Menu") || Input.GetKeyDown(KeyCode.Escape))
