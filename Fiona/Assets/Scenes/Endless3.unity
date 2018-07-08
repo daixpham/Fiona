@@ -613,20 +613,15 @@ Prefab:
       propertyPath: m_RootOrder
       value: 10
       objectReference: {fileID: 0}
-    - target: {fileID: 114875536525909342, guid: 3fd3bcc80b1f768448f09f23e8fc2f47,
-        type: 2}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 1075910651}
+    - target: {fileID: 1608035584268564, guid: 3fd3bcc80b1f768448f09f23e8fc2f47, type: 2}
+      propertyPath: m_Name
+      value: 'Terrain '
+      objectReference: {fileID: 0}
     - target: {fileID: 114906258091754754, guid: 3fd3bcc80b1f768448f09f23e8fc2f47,
         type: 2}
       propertyPath: player
       value: 
       objectReference: {fileID: 1075910651}
-    - target: {fileID: 1608035584268564, guid: 3fd3bcc80b1f768448f09f23e8fc2f47, type: 2}
-      propertyPath: m_Name
-      value: 'Terrain '
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3fd3bcc80b1f768448f09f23e8fc2f47, type: 2}
   m_IsPrefabParent: 0
