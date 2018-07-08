@@ -3022,12 +3022,12 @@ MonoBehaviour:
   mainMenu: {fileID: 494847435}
   settingsMenu: {fileID: 1199735558}
   creditsMenu: {fileID: 550270}
+  tutorialMenu: {fileID: 1311854633}
   difficultyText: {fileID: 1570826277}
   slider: {fileID: 118534074}
   m_Start: {fileID: 1991662225}
   m_Exit: {fileID: 1796648224}
   m_Credits: {fileID: 428598090}
-  imgCredits: {fileID: 0}
 --- !u!1 &1796648220
 GameObject:
   m_ObjectHideFlags: 0
@@ -3235,7 +3235,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1782562499}
-        m_MethodName: closeGame
+        m_MethodName: openTutorial
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
