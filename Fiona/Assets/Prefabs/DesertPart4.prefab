@@ -141,7 +141,7 @@ GameObject:
   - component: {fileID: 64628165907220934}
   m_Layer: 0
   m_Name: desert_part4_way
-  m_TagString: CollisionObject
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

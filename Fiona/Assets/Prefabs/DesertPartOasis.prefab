@@ -126,7 +126,7 @@ GameObject:
   - component: {fileID: 136197289488496952}
   m_Layer: 0
   m_Name: Cactus_Short_02 (1)
-  m_TagString: Untagged
+  m_TagString: CollisionObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -292,7 +292,7 @@ GameObject:
   - component: {fileID: 64404269891584224}
   m_Layer: 0
   m_Name: desert_partOasis_way
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -391,7 +391,7 @@ GameObject:
   - component: {fileID: 136710206810429466}
   m_Layer: 0
   m_Name: Cactus_Short_01 (5)
-  m_TagString: Untagged
+  m_TagString: CollisionObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -446,7 +446,7 @@ GameObject:
   - component: {fileID: 54018212632936988}
   m_Layer: 0
   m_Name: RockWITHPARTICLES
-  m_TagString: Untagged
+  m_TagString: CollisionObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -583,6 +583,7 @@ GameObject:
   - component: {fileID: 33338709841890936}
   - component: {fileID: 23562232315453186}
   - component: {fileID: 114742035199281202}
+  - component: {fileID: 65784367034297954}
   m_Layer: 4
   m_Name: WaterBasicDaytime 1
   m_TagString: Untagged
@@ -621,7 +622,7 @@ GameObject:
   - component: {fileID: 136590368932887138}
   m_Layer: 0
   m_Name: Cactus_Short_01 (4)
-  m_TagString: Untagged
+  m_TagString: CollisionObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -656,7 +657,7 @@ GameObject:
   - component: {fileID: 136322286105525036}
   m_Layer: 0
   m_Name: Cactus_Short_02 (2)
-  m_TagString: Untagged
+  m_TagString: CollisionObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -1080,7 +1081,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1162347890599332}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -59.69, y: 0, z: 0}
+  m_LocalPosition: {x: 54.057396, y: -0.71834946, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4777409626524558}
@@ -2902,6 +2903,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.8390988, y: 2.653946, z: 1.8897265}
   m_Center: {x: -0.019178689, y: 0.99599105, z: -0.010020196}
+--- !u!65 &65784367034297954
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1787136094266284}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.9999993, y: 2, z: 1.9999988}
+  m_Center: {x: -0.00000032782555, y: -1, z: 0.00000032782555}
 --- !u!114 &114054858827905984
 MonoBehaviour:
   m_ObjectHideFlags: 1

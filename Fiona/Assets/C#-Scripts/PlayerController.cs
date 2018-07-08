@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour {
     [SerializeField] private GameObject player;
     [SerializeField] private Rigidbody rigidBody;
     [SerializeField] private float movement = 0f;
+    bool regen = false;
     public bool grounded=true;
     public bool w_pressed;
     GameObject Animation;
@@ -28,6 +29,8 @@ public class PlayerController : MonoBehaviour {
 			float y_ = Animation.transform.rotation.y;
 			tmp.SetInteger ("State", 1);
 
+            if (regen)
+                GameSingelton.Instance.RestoreHealth(2f);
 		
 			if (jump != 0 && grounded && !w_pressed) {
 				w_pressed = true;
@@ -65,5 +68,20 @@ public class PlayerController : MonoBehaviour {
             GameSingelton.Instance.move = new Vector3(GameSingelton.SPEED,0,0);
         }
     }
-		
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Oasis")
+        {
+            regen = true;
+        }
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.tag == "Oasis")
+        {
+            regen = false;
+        }
+    }
+
 }
