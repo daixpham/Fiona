@@ -8,7 +8,7 @@ public class TerrainSpawner : MonoBehaviour {
 	private List<GameObject> createdList;
 	private GameObject player;
 	private int playerTile;
-	private float tileSize=58;
+	private float tileSize=59;
     private float X, Y, Z;
     private bool oasis;
     private int sameLimit = 2;

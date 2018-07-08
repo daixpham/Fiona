@@ -58,7 +58,7 @@ GameObject:
   - component: {fileID: 136249248868219466}
   m_Layer: 0
   m_Name: Cactus_Short_01 (5)
-  m_TagString: CollisionObject
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -93,7 +93,7 @@ GameObject:
   - component: {fileID: 136708409384813176}
   m_Layer: 0
   m_Name: Cactus_Short_01 (7)
-  m_TagString: CollisionObject
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -163,7 +163,7 @@ GameObject:
   - component: {fileID: 64714802280346678}
   m_Layer: 0
   m_Name: Rock_Medium
-  m_TagString: CollisionObject
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -180,7 +180,7 @@ GameObject:
   - component: {fileID: 23297070471115714}
   m_Layer: 0
   m_Name: Cactus_Short_01 (7)
-  m_TagString: CollisionObject
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -216,7 +216,7 @@ GameObject:
   - component: {fileID: 136487172050310314}
   m_Layer: 0
   m_Name: Cactus_Short_01 (5)
-  m_TagString: CollisionObject
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -320,7 +320,7 @@ GameObject:
   - component: {fileID: 136410570474563204}
   m_Layer: 0
   m_Name: Cactus_Short_01 (4)
-  m_TagString: CollisionObject
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -355,7 +355,7 @@ GameObject:
   - component: {fileID: 64248262350716622}
   m_Layer: 0
   m_Name: Rock_Medium (1)
-  m_TagString: CollisionObject
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -390,7 +390,7 @@ GameObject:
   - component: {fileID: 136619872796493754}
   m_Layer: 0
   m_Name: Cactus_Short_01 (4)
-  m_TagString: CollisionObject
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -408,7 +408,7 @@ GameObject:
   - component: {fileID: 136600941672093426}
   m_Layer: 0
   m_Name: Cactus_Short_01 (6)
-  m_TagString: CollisionObject
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -511,7 +511,7 @@ GameObject:
   - component: {fileID: 23100996995465584}
   m_Layer: 0
   m_Name: Cactus_Short_01 (6)
-  m_TagString: CollisionObject
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295

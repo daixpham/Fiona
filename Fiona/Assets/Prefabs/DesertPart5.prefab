@@ -27,7 +27,7 @@ GameObject:
   - component: {fileID: 54408092383204370}
   m_Layer: 0
   m_Name: RockWITHPARTICLES (2)
-  m_TagString: CollisionObject
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -98,7 +98,7 @@ GameObject:
   - component: {fileID: 54281203806881910}
   m_Layer: 0
   m_Name: RockWITHPARTICLES (3)
-  m_TagString: CollisionObject
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -116,7 +116,7 @@ GameObject:
   - component: {fileID: 64226803479335302}
   m_Layer: 0
   m_Name: Rock_Small_02
-  m_TagString: CollisionObject
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -204,7 +204,7 @@ GameObject:
   - component: {fileID: 136895126973862600}
   m_Layer: 0
   m_Name: Cactus_Short_02
-  m_TagString: CollisionObject
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -242,7 +242,7 @@ GameObject:
   - component: {fileID: 54342053951388132}
   m_Layer: 0
   m_Name: RockWITHPARTICLES
-  m_TagString: CollisionObject
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -263,7 +263,7 @@ GameObject:
   - component: {fileID: 54476604796491786}
   m_Layer: 0
   m_Name: RockWITHPARTICLES
-  m_TagString: CollisionObject
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -333,7 +333,7 @@ GameObject:
   - component: {fileID: 136062848214328708}
   m_Layer: 0
   m_Name: Cactus_Short_01 (5)
-  m_TagString: CollisionObject
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -369,7 +369,7 @@ GameObject:
   - component: {fileID: 64912575602178354}
   m_Layer: 0
   m_Name: Rock_Small_01
-  m_TagString: CollisionObject
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -425,7 +425,7 @@ GameObject:
   - component: {fileID: 54345904377205376}
   m_Layer: 0
   m_Name: RockWITHPARTICLES (1)
-  m_TagString: CollisionObject
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -446,7 +446,7 @@ GameObject:
   - component: {fileID: 54863022381899820}
   m_Layer: 0
   m_Name: RockWITHPARTICLES (1)
-  m_TagString: CollisionObject
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -551,7 +551,7 @@ GameObject:
   - component: {fileID: 136205527047516540}
   m_Layer: 0
   m_Name: Cactus_Short_02 (1)
-  m_TagString: CollisionObject
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -2389,7 +2389,7 @@ BoxCollider:
   m_GameObject: {fileID: 1848918166552960}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1.8390988, y: 2.653946, z: 1.8897265}
   m_Center: {x: -0.019178689, y: 0.99599105, z: -0.010020196}
@@ -2401,7 +2401,7 @@ BoxCollider:
   m_GameObject: {fileID: 1530044966586980}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1.8390988, y: 2.653946, z: 1.8897265}
   m_Center: {x: -0.019178689, y: 0.99599105, z: -0.010020196}
@@ -2413,7 +2413,7 @@ BoxCollider:
   m_GameObject: {fileID: 1558167929749674}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1.8390988, y: 2.653946, z: 1.8897265}
   m_Center: {x: -0.019178689, y: 0.99599105, z: -0.010020196}
@@ -2425,7 +2425,7 @@ BoxCollider:
   m_GameObject: {fileID: 1807207771260968}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1.8390988, y: 2.653946, z: 1.8897265}
   m_Center: {x: -0.019178689, y: 0.99599105, z: -0.010020196}
@@ -2437,7 +2437,7 @@ BoxCollider:
   m_GameObject: {fileID: 1173543385827802}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1.8390988, y: 2.653946, z: 1.8897265}
   m_Center: {x: -0.019178689, y: 0.99599105, z: -0.010020196}
@@ -2449,7 +2449,7 @@ BoxCollider:
   m_GameObject: {fileID: 1042981769681590}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1.8390988, y: 2.653946, z: 1.8897265}
   m_Center: {x: -0.019178689, y: 0.99599105, z: -0.010020196}

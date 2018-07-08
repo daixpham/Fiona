@@ -25,7 +25,7 @@ public class GameSingelton : MonoBehaviour {
     public static bool ButtonRestart ;
     public static bool Tutorial = true;
     private static bool first;
-    public const float SPEED = 0.5f;
+    public const float SPEED = 0.3f;
     public  Vector3 move { get; set; }
     // Use this for initializationv
     public static GameSingelton Instance

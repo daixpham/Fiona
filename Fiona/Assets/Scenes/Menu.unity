@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.57481706, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -356,7 +356,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 2
   m_WholeNumbers: 1
-  m_Value: 0
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -1232,25 +1232,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Made By
-
-    Lisa
-
-    Dai
-
-    Paul
-
-    Erik
-
-
-
-    Assets:
-
-    Unity Technology - WasserPlane (Unity Standart Essets) Scripte etc.
-
-    Kaktus Pack von SANDRO TATINASHVILI
-
-    ColorSkies von NIGHTSOUNDGAMES'
+  m_Text: "Made By\nLisa H\xF6per\nDai Pham Xuan\nPaul Stang\nErik Stausebach \n\nAssets:\nUnity
+    Technology - WasserPlane (Unity Standart Essets) Scripte\n etc. | Kaktus Pack
+    von SANDRO TATINASHVILI\nColorSkies von NIGHTSOUNDGAMES\nDiversfier: Generator;
+    Instant Action; \nWho needs controls?; Hmm, let me twek this"
 --- !u!222 &682472484
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2038,7 +2023,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -2696,7 +2681,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Schwierigkeitsgrad: Einfach'
+  m_Text: "Schwierigkeitsgrad: \nEinfach Normal Schwer"
 --- !u!222 &1570826278
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2733,8 +2718,8 @@ RectTransform:
   m_Father: {fileID: 1215289178}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}

@@ -126,7 +126,7 @@ GameObject:
   - component: {fileID: 136197289488496952}
   m_Layer: 0
   m_Name: Cactus_Short_02 (1)
-  m_TagString: CollisionObject
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -391,7 +391,7 @@ GameObject:
   - component: {fileID: 136710206810429466}
   m_Layer: 0
   m_Name: Cactus_Short_01 (5)
-  m_TagString: CollisionObject
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -446,7 +446,7 @@ GameObject:
   - component: {fileID: 54018212632936988}
   m_Layer: 0
   m_Name: RockWITHPARTICLES
-  m_TagString: CollisionObject
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -622,7 +622,7 @@ GameObject:
   - component: {fileID: 136590368932887138}
   m_Layer: 0
   m_Name: Cactus_Short_01 (4)
-  m_TagString: CollisionObject
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -657,7 +657,7 @@ GameObject:
   - component: {fileID: 136322286105525036}
   m_Layer: 0
   m_Name: Cactus_Short_02 (2)
-  m_TagString: CollisionObject
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295

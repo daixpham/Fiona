@@ -98,5 +98,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waterDrop: {fileID: 1344206493364588, guid: 053d0566a359f454aa5910fb1632a748, type: 2}
   map: {fileID: 1608035584268564}
-  player: {fileID: 0}
+  player: {fileID: 1756606340524194, guid: eb9faf6243bd46c41bc3fe445f3c5468, type: 2}
   spawnRate: 2.5
