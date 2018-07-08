@@ -2,11 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WaterDrop : MonoBehaviour {
+public class Enemy : MonoBehaviour {
 
 	// Use this for initialization
-	void Start ()
-    {
+	void Start () {
 		
 	}
 	
@@ -21,15 +20,4 @@ public class WaterDrop : MonoBehaviour {
 			}
 		}
 	}
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.tag == "Player")
-        {
-            print(collision.gameObject.name);
-            GameSingelton.Instance.RestoreHealth(20f);
-            Object.Destroy(this.gameObject);
-         }
-
-    }
 }

@@ -27,6 +27,16 @@ public class Sandstorm : MonoBehaviour
         if (inSandstorm)
         {
             GameSingelton.Instance.DrainHealth();
+			GameSingelton.Instance.DrainHealth();
+			GameSingelton.Instance.DrainHealth();
+			GameSingelton.Instance.DrainHealth();
+			GameSingelton.Instance.DrainHealth();
+			GameSingelton.Instance.DrainHealth();
+			GameSingelton.Instance.DrainHealth();
+			GameSingelton.Instance.DrainHealth();
+			GameSingelton.Instance.DrainHealth();
+			GameSingelton.Instance.DrainHealth();
+
         }
 
 	}

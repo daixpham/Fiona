@@ -23,51 +23,47 @@ public class PlayerController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		float jump = Input.GetAxis ("Vertical");
-		float y_ = Animation.transform.rotation.y;
-        if (Input.GetKey(KeyCode.D))
-        {
+		if (GameSingelton.PlayerHealth > 0) {
+			float jump = Input.GetAxis ("Vertical");
+			float y_ = Animation.transform.rotation.y;
+			if (Input.GetKey (KeyCode.D)) {
             
            
-			if (Animation.transform.rotation.y ==1)
-            {
-                Animation.transform.Rotate(0, 180, 0);
+				if (Animation.transform.rotation.y == 1) {
+					Animation.transform.Rotate (0, 180, 0);
                 
-            }
+				}
 
-            tmp.SetInteger("State", 1);
+				tmp.SetInteger ("State", 1);
 
-        }
-        else
-      if (Input.GetKey(KeyCode.A))
-        {
+			} else if (Input.GetKey (KeyCode.A)) {
            
-			if (Animation.transform.rotation.y != 1)
-            {
+				if (Animation.transform.rotation.y != 1) {
               
-                Animation.transform.Rotate(0, 180, 0);
+					Animation.transform.Rotate (0, 180, 0);
                 
-            }
+				}
 
-            tmp.SetInteger("State", 1);
+				tmp.SetInteger ("State", 1);
 
 
-        }
-		else
-		{
-				tmp.SetInteger("State", 0);
+			} else {
+				tmp.SetInteger ("State", 0);
 
-		}
+			}
 		
-        if (jump!=0 && grounded && !w_pressed )
-        {
-			w_pressed = true;
-			rigidBody.AddForce(new Vector3(0,max_jumpPower,0), ForceMode.Impulse);
-        }
+			if (jump != 0 && grounded && !w_pressed) {
+				w_pressed = true;
+				rigidBody.AddForce (new Vector3 (0, max_jumpPower, 0), ForceMode.Impulse);
+			}
         
 
-		if (jump == 0) {
-			w_pressed = false;
+			if (jump == 0) {
+				w_pressed = false;
+			}
+		} 
+		else {
+			tmp.SetInteger ("State", 0);
 		}
     }
 
