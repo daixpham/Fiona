@@ -33,7 +33,7 @@ public class HealthBar : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         float currentHP = GameSingelton.PlayerHealth;
-		Debug.Log (currentHP);
+		//Debug.Log (currentHP);
 
 
         if ( currentHP> 0) {

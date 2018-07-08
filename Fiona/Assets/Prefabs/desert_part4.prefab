@@ -109,7 +109,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.04, y: 0.02, z: -0.06}
-  m_Center: {x: -0.02, y: 0, z: -0.05}
+  m_Center: {x: -0.02, y: 0, z: -0.04}
 --- !u!135 &135556212908152902
 SphereCollider:
   m_ObjectHideFlags: 1

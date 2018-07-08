@@ -534,8 +534,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e534ee84501a6de44995c861e3858d7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waterDrop: {fileID: 0}
-  map: {fileID: 0}
 --- !u!1 &624917758 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1528482702293704, guid: 48af1306fc6099a42bc3f07f73b6a838,
@@ -713,8 +711,8 @@ GameObject:
   - component: {fileID: 700254155}
   - component: {fileID: 700254154}
   m_Layer: 0
-  m_Name: Cube
-  m_TagString: Untagged
+  m_Name: Sandstorm
+  m_TagString: Sandstorm
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -746,7 +744,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 7fc2d544f55c7e94d8f3570b68248370, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
