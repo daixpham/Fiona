@@ -1173,8 +1173,9 @@ GameObject:
   - component: {fileID: 95223189354819616}
   - component: {fileID: 54159605318900416}
   - component: {fileID: 114495876960106672}
-  - component: {fileID: 114701216417392556}
   - component: {fileID: 136012544603331008}
+  - component: {fileID: 65809468959784440}
+  - component: {fileID: 114801707421183440}
   m_Layer: 0
   m_Name: Fiona(Update)
   m_TagString: Player
@@ -2050,9 +2051,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1756606340524194}
-  m_LocalRotation: {x: 0, y: -0.8475854, z: 0, w: 0.53065914}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 19, y: 17.58, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4186322979256684}
   - {fileID: 4684576907296254}
@@ -2068,7 +2069,7 @@ Transform:
   - {fileID: 4517134339709548}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: -115.9, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!4 &4401390206490268
 Transform:
   m_ObjectHideFlags: 1
@@ -2188,13 +2189,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1722629631683242}
-  m_LocalRotation: {x: 0.08704252, y: 0.83610547, z: -0.13902703, w: 0.5234718}
-  m_LocalPosition: {x: -4.002714, y: 3.183282, z: 2.4206114}
+  m_LocalRotation: {x: 0.029182997, y: -0.6926163, z: 0.02806656, w: 0.720169}
+  m_LocalPosition: {x: 10.238418, y: 2.2592344, z: 0.3650179}
   m_LocalScale: {x: 1.4068414, y: 3.0975404, z: 0}
   m_Children: []
   m_Father: {fileID: 4397246812020696}
   m_RootOrder: 11
-  m_LocalEulerAnglesHint: {x: 18.881, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 18.881, y: 270, z: 0}
 --- !u!4 &4522966152550582
 Transform:
   m_ObjectHideFlags: 1
@@ -2978,8 +2979,20 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 122
+  m_Constraints: 120
   m_CollisionDetection: 0
+--- !u!65 &65809468959784440
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1756606340524194}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.908851, y: 1.5290298, z: 0.31999996}
+  m_Center: {x: 0.058983862, y: 0.7865753, z: 0.09050143}
 --- !u!81 &81026763698821682
 AudioListener:
   m_ObjectHideFlags: 1
@@ -3035,13 +3048,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   max_speed: 3
-  max_jumpPower: 8
+  max_jumpPower: 20.54
   player: {fileID: 1756606340524194}
   rigidBody: {fileID: 54159605318900416}
   movement: 0
   grounded: 1
   w_pressed: 0
---- !u!114 &114701216417392556
+--- !u!114 &114801707421183440
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -3049,13 +3062,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1756606340524194}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 61a9f63b398beb84bb3f27e11f503efa, type: 3}
+  m_Script: {fileID: 11500000, guid: dc0c7c95d08e817498a4d84aa693b449, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHP: 100
-  currentHP: 100
-  decay: 5
-  isAlive: 1
+  controller: {fileID: 95223189354819616}
+  rigidBody: {fileID: 54159605318900416}
 --- !u!124 &124695144253520916
 Behaviour:
   m_ObjectHideFlags: 1
@@ -3071,11 +3082,11 @@ CapsuleCollider:
   m_GameObject: {fileID: 1756606340524194}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.153679
-  m_Height: 2.341038
+  m_Enabled: 0
+  m_Radius: 0.24373332
+  m_Height: 1.9886074
   m_Direction: 1
-  m_Center: {x: -0.00000004498834, y: 0.6705189, z: -0.028096035}
+  m_Center: {x: 0, y: 0.8237848, z: 0.04449901}
 --- !u!137 &137061951703101126
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
