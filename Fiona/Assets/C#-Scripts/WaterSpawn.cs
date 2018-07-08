@@ -18,13 +18,15 @@ public class WaterSpawn : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-
-		if (secs > 0) {
-			secs -= Time.deltaTime;
-		} else {
-			secs = spawnRate;
-			GameObject obj =Instantiate (waterDrop, new Vector3 ((player.transform.position.x + 40),12, 0.5f), Quaternion.Euler (270,0,0));
-			obj.transform.parent = transform;
+		float x = Input.GetAxis ("Horizontal");
+		if (x != 0) {
+			if (secs > 0) {
+				secs -= Time.deltaTime;
+			} else {
+				secs = spawnRate;
+				GameObject obj =Instantiate (waterDrop, new Vector3 ((player.transform.position.x + 40),12, 0.5f), Quaternion.Euler (270,0,0));
+				obj.transform.parent = transform;
+			}
 		}
 	}
 

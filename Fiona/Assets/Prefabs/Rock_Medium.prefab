@@ -21,13 +21,12 @@ GameObject:
   - component: {fileID: 4900642368510304}
   - component: {fileID: 33002036576121748}
   - component: {fileID: 23324626795558104}
-  - component: {fileID: 64473582887641380}
   - component: {fileID: 54734721736781528}
   - component: {fileID: 65605867986413044}
   - component: {fileID: 114704787898414612}
   m_Layer: 0
   m_Name: Rock_Medium
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -102,20 +101,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 120
   m_CollisionDetection: 0
---- !u!64 &64473582887641380
-MeshCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1405192594588168}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_SkinWidth: 0.01
-  m_Mesh: {fileID: 4300000, guid: 3acf15a9d1e36b84ca35b8f1787f9c6c, type: 3}
 --- !u!65 &65605867986413044
 BoxCollider:
   m_ObjectHideFlags: 1

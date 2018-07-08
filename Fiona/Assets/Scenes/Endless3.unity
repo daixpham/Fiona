@@ -414,90 +414,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &278307525
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4697280938288052, guid: 408e8cc5a5fae2141adb250f1574b60c, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 26.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4697280938288052, guid: 408e8cc5a5fae2141adb250f1574b60c, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 16.62
-      objectReference: {fileID: 0}
-    - target: {fileID: 4697280938288052, guid: 408e8cc5a5fae2141adb250f1574b60c, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4697280938288052, guid: 408e8cc5a5fae2141adb250f1574b60c, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: -0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 4697280938288052, guid: 408e8cc5a5fae2141adb250f1574b60c, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4697280938288052, guid: 408e8cc5a5fae2141adb250f1574b60c, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4697280938288052, guid: 408e8cc5a5fae2141adb250f1574b60c, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071067
-      objectReference: {fileID: 0}
-    - target: {fileID: 4697280938288052, guid: 408e8cc5a5fae2141adb250f1574b60c, type: 2}
-      propertyPath: m_RootOrder
-      value: 11
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 408e8cc5a5fae2141adb250f1574b60c, type: 2}
-  m_IsPrefabParent: 0
---- !u!1001 &312641987
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4900642368510304, guid: 2d19439cf08c9474d83db43241b4d7b4, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 28.802
-      objectReference: {fileID: 0}
-    - target: {fileID: 4900642368510304, guid: 2d19439cf08c9474d83db43241b4d7b4, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 16.62
-      objectReference: {fileID: 0}
-    - target: {fileID: 4900642368510304, guid: 2d19439cf08c9474d83db43241b4d7b4, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4900642368510304, guid: 2d19439cf08c9474d83db43241b4d7b4, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4900642368510304, guid: 2d19439cf08c9474d83db43241b4d7b4, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4900642368510304, guid: 2d19439cf08c9474d83db43241b4d7b4, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4900642368510304, guid: 2d19439cf08c9474d83db43241b4d7b4, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4900642368510304, guid: 2d19439cf08c9474d83db43241b4d7b4, type: 2}
-      propertyPath: m_RootOrder
-      value: 10
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 2d19439cf08c9474d83db43241b4d7b4, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &416852639
 GameObject:
   m_ObjectHideFlags: 0
@@ -900,9 +816,10 @@ MonoBehaviour:
   - {fileID: 1405192594588168, guid: 2d19439cf08c9474d83db43241b4d7b4, type: 2}
   - {fileID: 1750537717515178, guid: a2aaa02f7bdab76439b445e56fc97f8f, type: 2}
   - {fileID: 1965801333835156, guid: cae07616f253252458b8ea251b2c47a7, type: 2}
+  - {fileID: 1870507415232034, guid: 719c4e642ce502b49a3ce8516eef7064, type: 2}
   map: {fileID: 1196858260}
   player: {fileID: 2052237308}
-  minSpawnRate: 2.5
+  minSpawnRate: 1.5
   maxSpawnRate: 1
 --- !u!1 &1520787772
 GameObject:
