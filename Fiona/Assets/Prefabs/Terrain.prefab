@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4917940992229920}
   - component: {fileID: 114177179612029780}
   - component: {fileID: 114875536525909342}
+  - component: {fileID: 114906258091754754}
   m_Layer: 0
   m_Name: Terrain
   m_TagString: Untagged
@@ -54,7 +55,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tileList:
   - {fileID: 1756204278376490, guid: 41c81bcd5c70f814ab682bb9c6709281, type: 2}
+  - {fileID: 1834995986578852, guid: 483f8850234c3014f82db169dea7b929, type: 2}
   - {fileID: 1982317044337844, guid: 8a65703d3a1e65044aefb4473b54dc8a, type: 2}
+  - {fileID: 1162347890599332, guid: b630ef02b1273a34ea0a81f1470874a4, type: 2}
+  - {fileID: 1804670526770078, guid: 3331f65f724d7ac4599799190f78da7a, type: 2}
   map: {fileID: 1608035584268564}
 --- !u!114 &114875536525909342
 MonoBehaviour:
@@ -62,7 +66,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1608035584268564}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a17a934a532549c4eaac41cda83d6375, type: 3}
   m_Name: 
@@ -79,3 +83,18 @@ MonoBehaviour:
   minSpawnRate: 1.5
   maxSpawnRate: 1
   waterspawn: 1.5
+--- !u!114 &114906258091754754
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1608035584268564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48fde4f892031a745892c3e87011389a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waterDrop: {fileID: 1306021027994388, guid: 408e8cc5a5fae2141adb250f1574b60c, type: 2}
+  map: {fileID: 1608035584268564}
+  player: {fileID: 0}
+  spawnRate: 2.5

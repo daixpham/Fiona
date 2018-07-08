@@ -17,21 +17,17 @@ public class Menu : MonoBehaviour
 	[SerializeField] GameObject mainMenu;
 	[SerializeField] GameObject settingsMenu;
 	[SerializeField] GameObject creditsMenu;
+	[SerializeField] GameObject tutorialMenu;
 	[SerializeField] Text difficultyText;
 	[SerializeField] Slider slider;
     //Make sure to attach these Buttons in the Inspector
     public Button m_Start, m_Exit, m_Credits;
-    public RawImage imgCredits;
     public bool CreditsB { get; private set; }
-    private Vector3 imgPos;
     void Start()
     {
         Button btn1 = m_Start.GetComponent<Button>();
         Button btn2 = m_Exit.GetComponent<Button>();
         Button btn3 = m_Credits.GetComponent<Button>();
-        Image img = imgCredits.GetComponent<Image>();
-        imgPos = imgCredits.transform.position;
-        changeAlpha(0);
         //Calls the TaskOnClick/TaskWithParameters method when you click the Button
         btn1.onClick.AddListener(TaskOnClick);
         //   btn2.onClick.AddListener(delegate { TaskWithParameters("Hello"); });
@@ -46,7 +42,6 @@ public class Menu : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Return))
         {
-            changeAlpha(0);
   //          print("Return");
         }
     }
@@ -74,23 +69,6 @@ public class Menu : MonoBehaviour
         //Output this to console when the Button is clicked
         Debug.Log(message);
     }
-    void changeAlpha(int i)
-    {
-        Color c = imgCredits.color;
-        c.a = i;
-        imgCredits.color = c;
-        if (i == 1)
-        {
-            imgCredits.transform.position = imgPos;
-            CreditsB = true;
-        }
-        else
-        {
-            CreditsB = false;
-            imgCredits.transform.position = new Vector3(-100,-100,0);
-        }
-
-    }
 
 
 	public void openSettings(){
@@ -101,6 +79,11 @@ public class Menu : MonoBehaviour
 	public void openCredits(){
 		mainMenu.SetActive (false);
 		creditsMenu.SetActive (true);
+	}
+
+	public void openTutorial(){
+		mainMenu.SetActive (false);
+		tutorialMenu.SetActive (true);
 	}
 
 	public void startGame(){

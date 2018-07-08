@@ -12,12 +12,12 @@ public class TerrainSpawner : MonoBehaviour {
     private float X, Y, Z;
 	// Use this for initialization
 	void Start () {
-        X = -90;
+        X = 0;
         Y = 180;
         Z = 0;
 		createdList= new List<GameObject>();
 		player = GameObject.FindGameObjectWithTag("Player");
-		GameObject first = Instantiate (tileList [0], new Vector3 (0,0, 0), Quaternion.Euler (X, Y, Z));
+		GameObject first = Instantiate (tileList [tileList.Length-1], new Vector3 (0,0, 0), Quaternion.Euler (X, Y, Z));
 		first.transform.parent = map.transform;
 		first.tag = "Ground";
 		createdList.Add (first);
@@ -26,7 +26,7 @@ public class TerrainSpawner : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (GameSingelton.PlayerHealth > 0) {
-			float x = Time.deltaTime * 20f;
+			float x = Time.deltaTime * 10f;
 			foreach (GameObject tile in createdList) {
 				tile.transform.Translate (x, 0, 0);
 			}

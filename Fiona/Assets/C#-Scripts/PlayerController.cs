@@ -44,8 +44,9 @@ public class PlayerController : MonoBehaviour {
 		}
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnCollisionEnter(Collision collision)
     {
+        print(collision.gameObject.tag);
         if (collision.gameObject.tag == "Ground") {
             grounded = true;
         }
