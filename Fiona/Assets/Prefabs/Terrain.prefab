@@ -77,7 +77,7 @@ MonoBehaviour:
   - {fileID: 1965801333835156, guid: cae07616f253252458b8ea251b2c47a7, type: 2}
   - {fileID: 1870507415232034, guid: 719c4e642ce502b49a3ce8516eef7064, type: 2}
   - {fileID: 1405192594588168, guid: 2d19439cf08c9474d83db43241b4d7b4, type: 2}
-  - {fileID: 1306021027994388, guid: 408e8cc5a5fae2141adb250f1574b60c, type: 2}
+  - {fileID: 0}
   map: {fileID: 1608035584268564}
   player: {fileID: 0}
   minSpawnRate: 1.5
@@ -94,7 +94,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48fde4f892031a745892c3e87011389a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waterDrop: {fileID: 1306021027994388, guid: 408e8cc5a5fae2141adb250f1574b60c, type: 2}
+  waterDrop: {fileID: 1344206493364588, guid: 053d0566a359f454aa5910fb1632a748, type: 2}
   map: {fileID: 1608035584268564}
   player: {fileID: 0}
   spawnRate: 2.5

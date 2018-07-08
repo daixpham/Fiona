@@ -1176,6 +1176,7 @@ GameObject:
   - component: {fileID: 136012544603331008}
   - component: {fileID: 65809468959784440}
   - component: {fileID: 114801707421183440}
+  - component: {fileID: 65285403582457618}
   m_Layer: 0
   m_Name: Fiona(Update)
   m_TagString: Player
@@ -2052,7 +2053,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1756606340524194}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 19, y: 17.58, z: 0}
+  m_LocalPosition: {x: 19, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4186322979256684}
@@ -2981,6 +2982,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 120
   m_CollisionDetection: 0
+--- !u!65 &65285403582457618
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1756606340524194}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.7, y: 1.504849, z: 1.9828026}
+  m_Center: {x: 0.058983862, y: 0.77764297, z: -0.9017947}
 --- !u!65 &65809468959784440
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -2991,8 +3004,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.908851, y: 1.5290298, z: 0.31999996}
-  m_Center: {x: 0.058983862, y: 0.7865753, z: 0.09050143}
+  m_Size: {x: 1.87, y: 1.5290298, z: 0.3}
+  m_Center: {x: 0.058983862, y: 0.7865753, z: -0.13}
 --- !u!81 &81026763698821682
 AudioListener:
   m_ObjectHideFlags: 1

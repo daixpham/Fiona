@@ -46,17 +46,23 @@ public class PlayerController : MonoBehaviour {
 
     private void OnCollisionEnter(Collision collision)
     {
-        print(collision.gameObject.tag);
+       // print(collision.gameObject.tag);
         if (collision.gameObject.tag == "Ground") {
             grounded = true;
         }
+
+        if (collision.gameObject.tag == "CollisionObject")
+        {
+            print("Collision");
+            GameSingelton.Instance.move = new Vector3(0,0,0);
+        }
     }
 
-    private void OnCollisionExit2D(Collision2D collision)
+    private void OnCollisionExit(Collision collision)
     {
-        if (collision.gameObject.tag == "Ground")
+        if (collision.gameObject.tag == "CollisionObject")
         {
-            grounded = false;
+            GameSingelton.Instance.move = new Vector3(5f,0,0);
         }
     }
 		

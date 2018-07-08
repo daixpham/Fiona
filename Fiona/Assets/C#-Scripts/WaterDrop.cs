@@ -24,15 +24,28 @@ public class WaterDrop : MonoBehaviour {
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Player")
+//        if (collision.gameObject.tag == "Player")
+//        {
+////            print(collision.gameObject.name);
+//            GameSingelton.Instance.RestoreHealth(20f);
+//            Object.Destroy(this.gameObject);
+//			int numPoints = 10;
+//			for(int i=0;i < numPoints;i++)
+//				GameSingelton.Instance.UpdateScore ();
+//         }
+
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Player")
         {
-            //print(collision.gameObject.name);
+//            print(other.gameObject.name);
             GameSingelton.Instance.RestoreHealth(20f);
             Object.Destroy(this.gameObject);
-			int numPoints = 10;
-			for(int i=0;i < numPoints;i++)
-				GameSingelton.Instance.UpdateScore ();
-         }
+            int numPoints = 10;
+            for (int i = 0; i < numPoints; i++)
+                GameSingelton.Instance.UpdateScore();
+        }
 
     }
 }

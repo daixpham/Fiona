@@ -25,6 +25,7 @@ public class GameSingelton : MonoBehaviour {
     public static bool ButtonRestart ;
     public static bool Tutorial = true;
     private static bool first;
+    public  Vector3 move { get; set; }
     // Use this for initializationv
     public static GameSingelton Instance
     {
@@ -52,6 +53,7 @@ public class GameSingelton : MonoBehaviour {
     }
     void Start()
     {
+        move = new Vector3(0,0,0);
         ButtonMenu = false;
         ButtonRestart = false;
         resetVariables();
@@ -142,5 +144,6 @@ public class GameSingelton : MonoBehaviour {
             yield return null;
         }
     }
+
 
 }

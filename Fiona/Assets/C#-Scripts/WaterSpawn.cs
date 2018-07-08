@@ -21,7 +21,7 @@ public class WaterSpawn : MonoBehaviour {
 				secs -= Time.deltaTime;
 			} else {
 				secs = spawnRate;
-				GameObject obj =Instantiate (waterDrop, new Vector3 ((player.transform.position.x + 40),12, 0.5f), Quaternion.Euler (270,0,0));
+				GameObject obj =Instantiate (waterDrop, new Vector3 ((player.transform.position.x + 40),12, 0 ), Quaternion.Euler (270,0,0));
 				obj.transform.parent = transform;
 			}
 	}

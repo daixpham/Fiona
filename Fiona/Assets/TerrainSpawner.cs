@@ -10,6 +10,9 @@ public class TerrainSpawner : MonoBehaviour {
 	private int playerTile;
 	private float tileSize=58;
     private float X, Y, Z;
+    private bool oasis;
+    private int sameLimit = 2;
+    private int prevTile;
 	// Use this for initialization
 	void Start () {
         X = 0;
@@ -24,11 +27,13 @@ public class TerrainSpawner : MonoBehaviour {
 	}
 
 	// Update is called once per frame
-	void Update () {
+	void Update ()
+    {
 		if (GameSingelton.PlayerHealth > 0) {
-			float x = Time.deltaTime * 10f;
+			GameSingelton.Instance.move= new Vector3(Time.deltaTime * 5f,0,0);
 			foreach (GameObject tile in createdList) {
-				tile.transform.Translate (x, 0, 0);
+				tile.transform.Translate (GameSingelton.Instance.move);
+                
 			}
 		}
 		if (createdList [0].transform.position.x < ((player.transform.position.x) - tileSize*2 )) {
