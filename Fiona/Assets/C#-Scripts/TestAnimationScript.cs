@@ -10,7 +10,7 @@ public class TestAnimationScript : MonoBehaviour {
 	private bool _landing;
 	private bool _dead;
 	private bool _crouch;
-	private bool grounded=true;
+	public bool grounded=false;
 	private bool w_pressed;
     private int jump_count = 0;
 	public Animator controller;
@@ -24,25 +24,43 @@ public class TestAnimationScript : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
+
+        if (rigidBody.velocity.y <= 0)
+        {
+            controller.SetBool("IsFalling", true);
+            controller.SetBool("IsJumping", false);
+        }
+        else
+        {
+            controller.SetBool("IsFalling", false);
+        }
+
+
+        if(grounded)
+        {
+            controller.SetBool("InLanding", true);
+        }
+        else
+        {
+            controller.SetBool("InLanding", false);
+        }
        
         if (GameSingelton.PlayerHealth > 0)
         {
+            Debug.Log("Grounded" + grounded);
+
             controller.SetBool("IsRunning", true);
             if (Input.GetKeyDown(KeyCode.W) && grounded )
             {
                 
                 controller.SetBool("IsJumping", true);
-                controller.SetBool("IsRunning", false);
+                //controller.SetBool("IsRunning", false);
                 rigidBody.AddForce(new Vector3(0, 20f, 0), ForceMode.Impulse);
 
 
             }
            
-            if (grounded == true)
-            {
-                controller.SetBool("IsJumping", false);
-                
-            }
+
 
             if (_jumping == true)
             {
@@ -66,26 +84,26 @@ public class TestAnimationScript : MonoBehaviour {
 
 	private void OnCollisionEnter(Collision collision)
 	{
-		if (collision.gameObject.tag == "Ground"|| collision.gameObject.tag == "CollisionObject")
+		/*if (collision.gameObject.tag == "Ground"|| collision.gameObject.tag == "CollisionObject")
 		{
 			grounded = true;
 
 			
 
-		}
+		}*/
 
        
 	}
 
     private void OnCollisionExit(Collision collision)
     {
-        if (collision.gameObject.tag == "Ground" || collision.gameObject.tag == "CollisionObject")
+        /*if (collision.gameObject.tag == "Ground" || collision.gameObject.tag == "CollisionObject")
         {
             grounded = false;
 
 
 
-        }
+        }*/
 
 
     }

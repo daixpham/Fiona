@@ -126,7 +126,7 @@ GameObject:
   - component: {fileID: 136197289488496952}
   m_Layer: 0
   m_Name: Cactus_Short_02 (1)
-  m_TagString: Ground
+  m_TagString: CollisionObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -391,7 +391,7 @@ GameObject:
   - component: {fileID: 136710206810429466}
   m_Layer: 0
   m_Name: Cactus_Short_01 (5)
-  m_TagString: Ground
+  m_TagString: CollisionObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -622,7 +622,7 @@ GameObject:
   - component: {fileID: 136590368932887138}
   m_Layer: 0
   m_Name: Cactus_Short_01 (4)
-  m_TagString: Ground
+  m_TagString: CollisionObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -657,7 +657,7 @@ GameObject:
   - component: {fileID: 136322286105525036}
   m_Layer: 0
   m_Name: Cactus_Short_02 (2)
-  m_TagString: Ground
+  m_TagString: CollisionObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -1081,7 +1081,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1162347890599332}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 54.057396, y: -0.71834946, z: 0}
+  m_LocalPosition: {x: -59.69, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4777409626524558}

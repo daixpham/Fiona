@@ -12,7 +12,7 @@ public class SandstormCollider : MonoBehaviour {
     void Start()
     {
         inSandstorm = false;
-        VelocityX = 0.5f;
+        VelocityX = 0.05f;
     }
 	
 	// Update is called once per frame

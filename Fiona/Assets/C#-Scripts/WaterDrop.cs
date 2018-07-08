@@ -14,7 +14,7 @@ public class WaterDrop : MonoBehaviour {
 	void Update () {
         float tmp = GameSingelton.SPEED;
 		if (GameSingelton.PlayerHealth > 0 && GameSingelton.Instance.move.x>0) {
-			float x = Time.deltaTime * 10*tmp;
+            float x = tmp;//Time.deltaTime * 10*tmp;
 			transform.Translate (-x, 0, 0);
 
 			if (transform.position.x < -40 || transform.position.y < -40) {
