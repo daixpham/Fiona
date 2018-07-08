@@ -29,7 +29,6 @@ public class Menu : MonoBehaviour
         Button btn1 = m_Start.GetComponent<Button>();
         Button btn2 = m_Exit.GetComponent<Button>();
         Button btn3 = m_Credits.GetComponent<Button>();
-        Image img = imgCredits.GetComponent<Image>();
         imgPos = imgCredits.transform.position;
         changeAlpha(0);
         //Calls the TaskOnClick/TaskWithParameters method when you click the Button
