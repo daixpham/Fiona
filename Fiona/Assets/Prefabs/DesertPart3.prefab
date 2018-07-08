@@ -41,7 +41,7 @@ GameObject:
   - component: {fileID: 23887959244057388}
   m_Layer: 0
   m_Name: Rock_Large (2)
-  m_TagString: Untagged
+  m_TagString: CollisionObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -59,7 +59,7 @@ GameObject:
   - component: {fileID: 64573801407766882}
   m_Layer: 0
   m_Name: Rock_Small_01
-  m_TagString: Untagged
+  m_TagString: CollisionObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -77,7 +77,7 @@ GameObject:
   - component: {fileID: 64727825724775934}
   m_Layer: 0
   m_Name: Rock_Large (2)
-  m_TagString: Untagged
+  m_TagString: CollisionObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 64426794886675632}
   m_Layer: 0
   m_Name: Rock_Small_01
-  m_TagString: Untagged
+  m_TagString: CollisionObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -112,7 +112,7 @@ GameObject:
   - component: {fileID: 23023755449738582}
   m_Layer: 0
   m_Name: Rock_Large
-  m_TagString: Untagged
+  m_TagString: CollisionObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -129,7 +129,7 @@ GameObject:
   - component: {fileID: 23464209606439444}
   m_Layer: 0
   m_Name: Rock_Large (3)
-  m_TagString: Untagged
+  m_TagString: CollisionObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -164,7 +164,7 @@ GameObject:
   - component: {fileID: 23564972380101758}
   m_Layer: 0
   m_Name: Rock_Cone
-  m_TagString: Untagged
+  m_TagString: CollisionObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -181,7 +181,7 @@ GameObject:
   - component: {fileID: 23557602505678974}
   m_Layer: 0
   m_Name: Rock_Large
-  m_TagString: Untagged
+  m_TagString: CollisionObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -198,7 +198,7 @@ GameObject:
   - component: {fileID: 23811887808521784}
   m_Layer: 0
   m_Name: Rock_Medium
-  m_TagString: Untagged
+  m_TagString: CollisionObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -215,7 +215,7 @@ GameObject:
   - component: {fileID: 23137559665446276}
   m_Layer: 0
   m_Name: Rock_Heavy
-  m_TagString: Untagged
+  m_TagString: CollisionObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -253,7 +253,7 @@ GameObject:
   - component: {fileID: 54431125893893720}
   m_Layer: 0
   m_Name: RockWITHPARTICLES
-  m_TagString: Untagged
+  m_TagString: CollisionObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -271,7 +271,7 @@ GameObject:
   - component: {fileID: 64098788813825180}
   m_Layer: 0
   m_Name: Rock_Small_01 (2)
-  m_TagString: Untagged
+  m_TagString: CollisionObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -292,7 +292,7 @@ GameObject:
   - component: {fileID: 54320710101402204}
   m_Layer: 0
   m_Name: RockWITHPARTICLES (2)
-  m_TagString: Untagged
+  m_TagString: CollisionObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -309,7 +309,7 @@ GameObject:
   - component: {fileID: 23946674462385172}
   m_Layer: 0
   m_Name: Rock_Large (2)
-  m_TagString: Untagged
+  m_TagString: CollisionObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -344,7 +344,7 @@ GameObject:
   - component: {fileID: 23803315511365646}
   m_Layer: 0
   m_Name: Rock_Cone
-  m_TagString: Untagged
+  m_TagString: CollisionObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -362,7 +362,7 @@ GameObject:
   - component: {fileID: 64605915798014810}
   m_Layer: 0
   m_Name: Rock_Medium (2)
-  m_TagString: Untagged
+  m_TagString: CollisionObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -379,7 +379,7 @@ GameObject:
   - component: {fileID: 23142249831309860}
   m_Layer: 0
   m_Name: Rock_Large (1)
-  m_TagString: Untagged
+  m_TagString: CollisionObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -397,7 +397,7 @@ GameObject:
   - component: {fileID: 65557687902564124}
   m_Layer: 0
   m_Name: Rock_Medium (1)
-  m_TagString: Untagged
+  m_TagString: CollisionObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -418,7 +418,7 @@ GameObject:
   - component: {fileID: 54482048219379726}
   m_Layer: 0
   m_Name: RockWITHPARTICLES (1)
-  m_TagString: Untagged
+  m_TagString: CollisionObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -451,7 +451,7 @@ GameObject:
   - component: {fileID: 64878070225001954}
   m_Layer: 0
   m_Name: Rock_Small_01 (1)
-  m_TagString: Untagged
+  m_TagString: CollisionObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
