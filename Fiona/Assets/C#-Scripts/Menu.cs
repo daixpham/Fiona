@@ -9,9 +9,15 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Menu : MonoBehaviour
 {
+
+	[SerializeField] GameObject mainMenu;
+	[SerializeField] GameObject settingsMenu;
+	[SerializeField] Text difficultyText;
+	[SerializeField] Slider slider;
     //Make sure to attach these Buttons in the Inspector
     public Button m_Start, m_Exit, m_Credits;
     public RawImage imgCredits;
@@ -30,6 +36,9 @@ public class Menu : MonoBehaviour
         //   btn2.onClick.AddListener(delegate { TaskWithParameters("Hello"); });
         btn2.onClick.AddListener(TaskOnClick);
         btn3.onClick.AddListener(TaskOnClick);
+
+		mainMenu.SetActive (true);
+		settingsMenu.SetActive (false);
 
     }
     private void Update()
@@ -60,6 +69,8 @@ public class Menu : MonoBehaviour
             SceneManager.LoadScene(2);
             GameSingelton.start = true;
         }
+
+
         Debug.Log("You have clicked the button!");
     }
 
@@ -85,4 +96,37 @@ public class Menu : MonoBehaviour
         }
 
     }
+
+
+	public void openSettings(){
+		mainMenu.SetActive (false);
+		settingsMenu.SetActive (true);
+	}
+
+	public void openMainMenu(){
+		mainMenu.SetActive (true);
+		settingsMenu.SetActive (false);
+	}
+
+	public void difficultyChange(){
+		float f = slider.value;
+		if (f == 0) {
+			difficultyText.text = "Schwierigkeitsgrad: Einfach";
+			GameSingelton.PlayerMaxHealth = 200;
+			GameSingelton.scoreMult = 1;
+		}
+		else if (f == 1) {
+			difficultyText.text = "Schwierigkeitsgrad: Normal";
+			GameSingelton.PlayerMaxHealth = 100;
+			GameSingelton.scoreMult = 2;
+		}
+			
+		else{
+			difficultyText.text = "Schwierigkeitsgrad: Schwer";
+			GameSingelton.PlayerMaxHealth = 50;
+			GameSingelton.scoreMult = 3;
+		}
+			
+		Debug.Log (difficultyText);
+	}
 }

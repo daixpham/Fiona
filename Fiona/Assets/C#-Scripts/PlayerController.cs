@@ -26,31 +26,8 @@ public class PlayerController : MonoBehaviour {
 		if (GameSingelton.PlayerHealth > 0) {
 			float jump = Input.GetAxis ("Vertical");
 			float y_ = Animation.transform.rotation.y;
-			if (Input.GetKey (KeyCode.D)) {
-            
-           
-				if (Animation.transform.rotation.y == 1) {
-					Animation.transform.Rotate (0, 180, 0);
-                
-				}
+			tmp.SetInteger ("State", 1);
 
-				tmp.SetInteger ("State", 1);
-
-			} else if (Input.GetKey (KeyCode.A)) {
-           
-				if (Animation.transform.rotation.y != 1) {
-              
-					Animation.transform.Rotate (0, 180, 0);
-                
-				}
-
-				tmp.SetInteger ("State", 1);
-
-
-			} else {
-				tmp.SetInteger ("State", 0);
-
-			}
 		
 			if (jump != 0 && grounded && !w_pressed) {
 				w_pressed = true;

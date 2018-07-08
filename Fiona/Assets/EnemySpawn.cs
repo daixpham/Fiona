@@ -17,13 +17,10 @@ public class EnemySpawn : MonoBehaviour {
 		secs = random;
         print(enemyObjects.Length);
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
-		float x = Input.GetAxis ("Horizontal");
-        float random = Random.Range(maxSpawnRate, minSpawnRate);
-        if (x != 0) {
-			
+
 			if (secs > 0) {
 				secs -= Time.deltaTime;
                 waterspawn -= Time.deltaTime;

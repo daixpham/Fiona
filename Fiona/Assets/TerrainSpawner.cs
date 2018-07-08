@@ -26,7 +26,7 @@ public class TerrainSpawner : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (GameSingelton.PlayerHealth > 0) {
-			float x = Input.GetAxis ("Horizontal") * Time.deltaTime * 20f;
+			float x = Time.deltaTime * 20f;
 			foreach (GameObject tile in createdList) {
 				tile.transform.Translate (x, 0, 0);
 			}
