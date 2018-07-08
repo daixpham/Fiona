@@ -24,11 +24,7 @@ public class SandstormCollider : MonoBehaviour {
 			GameSingelton.Instance.DrainHealth();
 			GameSingelton.Instance.DrainHealth();
 			GameSingelton.Instance.DrainHealth();
-			GameSingelton.Instance.DrainHealth();
-			GameSingelton.Instance.DrainHealth();
-			GameSingelton.Instance.DrainHealth();
-			GameSingelton.Instance.DrainHealth();
-			GameSingelton.Instance.DrainHealth();
+
 		}
 
 	}

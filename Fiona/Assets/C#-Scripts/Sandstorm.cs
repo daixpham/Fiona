@@ -32,10 +32,7 @@ public class Sandstorm : MonoBehaviour
 			GameSingelton.Instance.DrainHealth();
 			GameSingelton.Instance.DrainHealth();
 			GameSingelton.Instance.DrainHealth();
-			GameSingelton.Instance.DrainHealth();
-			GameSingelton.Instance.DrainHealth();
-			GameSingelton.Instance.DrainHealth();
-			GameSingelton.Instance.DrainHealth();
+
 
         }
 
