@@ -28,14 +28,13 @@ public class TestAnimationScript : MonoBehaviour {
         if (GameSingelton.PlayerHealth > 0)
         {
             controller.SetBool("IsRunning", true);
-           
             if (Input.GetKeyDown(KeyCode.W) && grounded )
             {
                 
                 controller.SetBool("IsJumping", true);
                 controller.SetBool("IsRunning", false);
                 rigidBody.AddForce(new Vector3(0, 20f, 0), ForceMode.Impulse);
-               
+
 
             }
            
@@ -88,6 +87,6 @@ public class TestAnimationScript : MonoBehaviour {
 
         }
 
-        
+
     }
 }
