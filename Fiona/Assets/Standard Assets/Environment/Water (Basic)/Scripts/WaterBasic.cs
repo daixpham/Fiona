@@ -4,8 +4,10 @@ using UnityEngine;
 namespace UnityStandardAssets.Water
 {
     [ExecuteInEditMode]
+
     public class WaterBasic : MonoBehaviour
     {
+        bool mD = false;
         void Update()
         {
             Renderer r = GetComponent<Renderer>();
@@ -27,6 +29,18 @@ namespace UnityStandardAssets.Water
             Vector4 offsetClamped = new Vector4(Mathf.Repeat(offset4.x, 1.0f), Mathf.Repeat(offset4.y, 1.0f),
                 Mathf.Repeat(offset4.z, 1.0f), Mathf.Repeat(offset4.w, 1.0f));
             mat.SetVector("_WaveOffset", offsetClamped);
+            if(mD) moveDown();
+        }
+        private void OnTriggerEnter(Collider collider)
+        {
+            if (collider.gameObject.tag == "Sandstorm")
+                mD = true;
+                
+        }
+        private void moveDown()
+        {
+            this.transform.position -= new Vector3(0, 0.1f, 0);
         }
     }
+
 }

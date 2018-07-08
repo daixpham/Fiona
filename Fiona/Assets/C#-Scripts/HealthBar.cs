@@ -19,7 +19,7 @@ public class HealthBar : MonoBehaviour {
 		healthbar = this.GetComponent<Slider> ();
 		healthbar.maxValue = GameSingelton.PlayerMaxHealth;
 		healthbar.value = GameSingelton.PlayerMaxHealth;
-		Debug.Log(healthbar.maxValue + "    " + healthbar.value);
+//		Debug.Log(healthbar.maxValue + "    " + healthbar.value);
 		handle = healthbar.transform.GetChild (2).gameObject.transform.GetChild(0).gameObject;
 		GameObject tmpObj = healthbar.transform.GetChild (0).gameObject;
 		Image tmpImg = tmpObj.GetComponent<Image> ();

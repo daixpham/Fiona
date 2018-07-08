@@ -46,7 +46,7 @@ public class Menu : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Return))
         {
             changeAlpha(0);
-            print("Return");
+  //          print("Return");
         }
     }
     void TaskOnClick()
@@ -54,18 +54,18 @@ public class Menu : MonoBehaviour
         //Output this to console when the Button is clicked
         if (EventSystem.current.currentSelectedGameObject.name.ToString().Equals("Exit"))
         {
-            print("Quit");
+//            print("Quit");
             Application.Quit();
         }
         if (EventSystem.current.currentSelectedGameObject.name.ToString().Equals("Credits"))
         {
-            print("Credits");
+//            print("Credits");
             //load Credits
             changeAlpha(1);
         }
         if (EventSystem.current.currentSelectedGameObject.name.ToString().Equals("Start"))
         {
-            print("Start");
+//            print("Start");
             SceneManager.LoadScene(2);
             GameSingelton.start = true;
         }
