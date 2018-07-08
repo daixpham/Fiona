@@ -12,7 +12,7 @@ public class TerrainSpawner : MonoBehaviour {
     private float X, Y, Z;
 	// Use this for initialization
 	void Start () {
-        X = -90;
+        X = 0;
         Y = 180;
         Z = 0;
 		createdList= new List<GameObject>();
