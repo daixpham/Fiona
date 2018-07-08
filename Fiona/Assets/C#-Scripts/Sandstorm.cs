@@ -5,25 +5,29 @@ using UnityEngine;
 public class Sandstorm : MonoBehaviour
 {
 
-    public float VelocityY { get; set; }
-    private Vector3 VectorVelocity;
+    public float VelocityX { get; set; }
+
     private bool inSandstorm;
     // Use this for initialization
-    void Start ()
+    void Start()
     {
         inSandstorm = false;
-        VelocityY = 0.0001f;
-        if (GameSingelton.start)
-        {
- //           VectorVelocity = new Vector3(0, VelocityY, 0);
-        }
-	}
+        VelocityX = 0.1f;
+    }
 	
 	// Update is called once per frame
 	void Update ()
     {
-        Vector3 tmp = gameObject.transform.position + VectorVelocity;
-        this.gameObject.transform.Translate(tmp);
+        Vector3 tmp = transform.position;
+        if (GameSingelton.Instance.move.x >= 0)
+        {
+            tmp.x += VelocityX;
+        }
+        else
+        {
+            tmp = Vector3.zero;
+        }
+        transform.position = (tmp);
         if (inSandstorm)
         {
             GameSingelton.Instance.DrainHealth();
@@ -33,7 +37,6 @@ public class Sandstorm : MonoBehaviour
 			GameSingelton.Instance.DrainHealth();
 			GameSingelton.Instance.DrainHealth();
 
-
         }
 
 	}
@@ -42,7 +45,6 @@ public class Sandstorm : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             inSandstorm = true;
-            Destroy(collision.gameObject);
         }
     }
 }

@@ -29,13 +29,16 @@ public class TerrainSpawner : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
-		if (GameSingelton.PlayerHealth > 0) {
-			//GameSingelton.Instance.move= new Vector3(Time.deltaTime * 5f, 0, 0);
-			foreach (GameObject tile in createdList) {
-				tile.transform.Translate (GameSingelton.Instance.move);
-                
-			}
-		}
+        if (GameSingelton.PlayerHealth > 0)
+        {
+
+            foreach (GameObject tile in createdList)
+            {
+                tile.transform.Translate(GameSingelton.Instance.move);
+
+            }
+        }
+        else { GameSingelton.Instance.move = new Vector3(GameSingelton.SPEED, 0, 0); }
 		if (createdList [0].transform.position.x < ((player.transform.position.x) - tileSize*2 )) {
 			Destroy (createdList [0]);
 			createdList.RemoveAt (0);

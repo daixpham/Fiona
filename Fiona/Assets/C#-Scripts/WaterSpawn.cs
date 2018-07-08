@@ -19,7 +19,8 @@ public class WaterSpawn : MonoBehaviour {
 	void Update () {
 			if (secs > 0) {
 				secs -= Time.deltaTime;
-			} else {
+			} else if (GameSingelton.Instance.move.x > 0 && GameSingelton.PlayerHealth>0)
+            {
 				secs = spawnRate;
 				GameObject obj =Instantiate (waterDrop, new Vector3 ((player.transform.position.x + 40),12, 0 ), Quaternion.Euler (270,0,0));
 				obj.transform.parent = transform;

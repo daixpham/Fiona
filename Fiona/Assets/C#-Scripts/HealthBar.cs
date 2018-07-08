@@ -38,7 +38,7 @@ public class HealthBar : MonoBehaviour {
 			healthbar.value = currentHP;
 			Image image = handle.GetComponent<Image> ();
 			image.color = color1;
-			hpText.text = GameSingelton.PlayerHealth+" / "+GameSingelton.PlayerMaxHealth;
+			hpText.text = (int)GameSingelton.PlayerHealth+" / "+GameSingelton.PlayerMaxHealth;
 		} else {
 			Image image = handle.GetComponent<Image> ();
 			image.color = color2;
