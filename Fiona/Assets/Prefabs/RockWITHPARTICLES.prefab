@@ -23,8 +23,8 @@ GameObject:
   - component: {fileID: 199692221752736814}
   - component: {fileID: 65546287394108906}
   - component: {fileID: 114906399373118202}
-  - component: {fileID: 54506898041813608}
   - component: {fileID: 23208080288682588}
+  - component: {fileID: 54846520952024322}
   m_Layer: 0
   m_Name: RockWITHPARTICLES
   m_TagString: Untagged
@@ -57,7 +57,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1114634236749794}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 17.09, y: 2, z: 0}
+  m_LocalPosition: {x: 0, y: 2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4778158416112974}
@@ -71,7 +71,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1972485573665440}
   m_LocalRotation: {x: -0, y: -0, z: -0.013373627, w: 0.9999106}
-  m_LocalPosition: {x: 3.62, y: -0.1, z: 0}
+  m_LocalPosition: {x: 0, y: -0.1, z: 0}
   m_LocalScale: {x: 5, y: 1, z: 2.5}
   m_Children: []
   m_Father: {fileID: 4400051961505138}
@@ -154,18 +154,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1972485573665440}
   m_Mesh: {fileID: 4300002, guid: 91ac6d83ec9f1d046a1276145fab1029, type: 3}
---- !u!54 &54506898041813608
+--- !u!54 &54846520952024322
 Rigidbody:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1114634236749794}
   serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 1
+  m_Mass: 1000
+  m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -179,7 +179,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300002, guid: 91ac6d83ec9f1d046a1276145fab1029, type: 3}
@@ -191,7 +191,7 @@ BoxCollider:
   m_GameObject: {fileID: 1114634236749794}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1.8390988, y: 2.653946, z: 1.8897265}
   m_Center: {x: -0.019178689, y: 0.99599105, z: -0.010020196}

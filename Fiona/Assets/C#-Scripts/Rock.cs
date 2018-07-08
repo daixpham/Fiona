@@ -8,15 +8,19 @@ public class Rock : MonoBehaviour {
 	void Start () {
 		
 	}
-	
-	// Update is called once per frame
-	void Update () {
-        float x = Input.GetAxis("Horizontal") * Time.deltaTime * 20f;
-        transform.Translate(-x, 0, 0);
 
-        if (transform.position.x < -20 || transform.position.y < -20)
+    // Update is called once per frame
+    void Update()
+    {
+        if (GameSingelton.PlayerHealth > 0)
         {
-            Destroy(this.gameObject);
+            float x = Input.GetAxis("Horizontal") * Time.deltaTime * 20f;
+            transform.Translate(-x, 0, 0);
+
+            if (transform.position.x < -40 || transform.position.y < -40)
+            {
+                Destroy(this.gameObject);
+            }
         }
     }
     private void OnCollisionEnter(Collision collision)

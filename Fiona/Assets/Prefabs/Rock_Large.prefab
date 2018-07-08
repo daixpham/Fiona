@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 136064603635895690}
   - component: {fileID: 54630373154033706}
   - component: {fileID: 114991090930411212}
+  - component: {fileID: 65902020898340612}
   m_Layer: 0
   m_Name: Rock_Large
   m_TagString: Untagged
@@ -101,6 +102,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 120
   m_CollisionDetection: 0
+--- !u!65 &65902020898340612
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1870507415232034}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.152921, y: 4.0906887, z: 2.1995158}
+  m_Center: {x: 0.074908495, y: 1.9607873, z: -0.03362292}
 --- !u!114 &114991090930411212
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -120,7 +133,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 1870507415232034}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   m_Radius: 1.0997579
   m_Height: 4.0906887
   m_Direction: 1

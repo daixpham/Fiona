@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4917940992229920}
   - component: {fileID: 114177179612029780}
   - component: {fileID: 114244215391401224}
+  - component: {fileID: 114875536525909342}
   m_Layer: 0
   m_Name: Terrain
   m_TagString: Untagged
@@ -63,7 +64,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1608035584268564}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 48fde4f892031a745892c3e87011389a, type: 3}
   m_Name: 
@@ -72,3 +73,26 @@ MonoBehaviour:
   map: {fileID: 1608035584268564}
   player: {fileID: 0}
   spawnRate: 2.5
+--- !u!114 &114875536525909342
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1608035584268564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a17a934a532549c4eaac41cda83d6375, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyObjects:
+  - {fileID: 1114634236749794, guid: 3af60cb9e5fb38942b7a101f4ecc7108, type: 2}
+  - {fileID: 1750537717515178, guid: a2aaa02f7bdab76439b445e56fc97f8f, type: 2}
+  - {fileID: 1965801333835156, guid: cae07616f253252458b8ea251b2c47a7, type: 2}
+  - {fileID: 1870507415232034, guid: 719c4e642ce502b49a3ce8516eef7064, type: 2}
+  - {fileID: 1405192594588168, guid: 2d19439cf08c9474d83db43241b4d7b4, type: 2}
+  - {fileID: 1306021027994388, guid: 408e8cc5a5fae2141adb250f1574b60c, type: 2}
+  map: {fileID: 1608035584268564}
+  player: {fileID: 0}
+  minSpawnRate: 1.5
+  maxSpawnRate: 1
+  waterspawn: 1.5
