@@ -24,7 +24,7 @@ public class EnemySpawn : MonoBehaviour {
 			secs = random;
 			int randomObject = (int)Random.Range (0, enemyObjects.Length);
 			random = Random.Range (40, 80);
-			float randomZ = Random.Range (-2f, 2f);
+			float randomZ = Random.Range (-4f, 4f);
 			GameObject obj =Instantiate (enemyObjects[randomObject], new Vector3 ((player.transform.position.x + random),12,randomZ), Quaternion.Euler (0,0,0));
 			obj.transform.parent = transform;
 		}
