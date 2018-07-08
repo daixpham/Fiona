@@ -36,17 +36,19 @@ public class TestAnimationScript : MonoBehaviour {
             
             rigidBody.AddForce(new Vector3(0, 3f,0), ForceMode.Impulse);
          
-            if (grounded == true )
-            {
-                controller.SetBool("IsJumping", false);
-                controller.SetBool("InLanding", false);
+            
+        }
 
-            }
+        if (grounded == true)
+        {
+            controller.SetBool("IsJumping", false);
+            controller.SetBool("InLanding", false);
+
         }
 
         if (_jumping == true)
         {
-            w_pressed = false;
+            w_pressed = true;
         }
 
     }
@@ -59,7 +61,7 @@ public class TestAnimationScript : MonoBehaviour {
         {
             grounded = true;
             
-            controller.SetBool("InLanding", true);
+            controller.SetBool("InLanding", false);
 
         }
     }
@@ -69,8 +71,7 @@ public class TestAnimationScript : MonoBehaviour {
         if (collision.gameObject.tag == "Ground")
         {
             grounded = false;
-            _jumping = false;
-
+            controller.SetBool("InLanding", true);
         }
     }
 }
