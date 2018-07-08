@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public class GameSingelton : MonoBehaviour {
 
-    private static GameSingelton instance = null;
+    [SerializeField]private static GameSingelton instance = null;
     private float DRAIN_RATE = 0.1f;
     private enum sceneAllowed { Load=0, MainMenu=1,Game =2}
 
@@ -16,8 +16,9 @@ public class GameSingelton : MonoBehaviour {
     public float distance { get; set; }
     public float TotalDistance { get; private set; }
     public int PlayerPoint { get; private set; }
-    public static float PlayerHealth { get; private set; }
-    public const float PlayerMaxHealth = 100;
+	public static float PlayerHealth { get; private set; }
+	public static float PlayerMaxHealth { get; set; }
+	public static int scoreMult { get; set; }
 
     public static bool start;
     public static bool ButtonMenu ;
@@ -55,11 +56,14 @@ public class GameSingelton : MonoBehaviour {
         ButtonRestart = false;
         resetVariables();
         StartCoroutine(LoadYourSceneAsync((int)sceneAllowed.MainMenu));
+		PlayerMaxHealth = 100;
+		scoreMult = 2;
+		PlayerHealth = PlayerMaxHealth;
     }
 
     public void UpdateScore()
     {
-        PlayerPoint++;
+		PlayerPoint+=scoreMult;
     }
     private void FixedUpdate()
     {
@@ -114,6 +118,12 @@ public class GameSingelton : MonoBehaviour {
         PlayerHealth -= DRAIN_RATE;
         if (PlayerHealth <= 0) { start = false; }
     }
+    public void DrainHealth(float f)
+    {
+        PlayerHealth -= f;
+        if (PlayerHealth <= 0) { start = false; }
+    }
+
     public void RestoreHealth(float h) { 
 		PlayerHealth += h; 
 		if (PlayerHealth > PlayerMaxHealth) {

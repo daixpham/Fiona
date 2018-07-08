@@ -12,7 +12,14 @@ public class WaterDrop : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+		if (GameSingelton.PlayerHealth > 0) {
+			float x = Time.deltaTime * 20f;
+			transform.Translate (-x, 0, 0);
+
+			if (transform.position.x < -40 || transform.position.y < -40) {
+				Destroy (this.gameObject);
+			}
+		}
 	}
 
     private void OnCollisionEnter(Collision collision)
@@ -22,6 +29,9 @@ public class WaterDrop : MonoBehaviour {
             print(collision.gameObject.name);
             GameSingelton.Instance.RestoreHealth(20f);
             Object.Destroy(this.gameObject);
+			int numPoints = 10;
+			for(int i=0;i < numPoints;i++)
+				GameSingelton.Instance.UpdateScore ();
          }
 
     }
