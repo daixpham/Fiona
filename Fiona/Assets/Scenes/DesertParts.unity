@@ -52,7 +52,7 @@ LightmapSettings:
     m_AlbedoBoost: 1
     m_TemporalCoherenceThreshold: 1
     m_EnvironmentLightingMode: 0
-    m_EnableBakedLightmaps: 1
+    m_EnableBakedLightmaps: 0
     m_EnableRealtimeLightmaps: 1
   m_LightmapEditorSettings:
     serializedVersion: 10
@@ -113,7 +113,7 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1001 &211502596
+--- !u!1001 &930922496
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -201,7 +201,7 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2ba00556abb8d16489c5b711c00d92ef, type: 2}
   m_IsPrefabParent: 0
---- !u!1001 &1942679040
+--- !u!1001 &1508542106
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -239,10 +239,6 @@ Prefab:
     - target: {fileID: 4861891913797562, guid: 41c81bcd5c70f814ab682bb9c6709281, type: 2}
       propertyPath: m_RootOrder
       value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4042180414504150, guid: 41c81bcd5c70f814ab682bb9c6709281, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 41c81bcd5c70f814ab682bb9c6709281, type: 2}
