@@ -196,6 +196,7 @@ GameObject:
   - component: {fileID: 33140876022230910}
   - component: {fileID: 23345235463887402}
   - component: {fileID: 65449324543747022}
+  - component: {fileID: 114606810837681034}
   m_Layer: 0
   m_Name: Rock_Small_01
   m_TagString: Untagged
@@ -266,6 +267,7 @@ GameObject:
   - component: {fileID: 33829266828758340}
   - component: {fileID: 23214122601349776}
   - component: {fileID: 65217689239933604}
+  - component: {fileID: 114198046388745536}
   m_Layer: 0
   m_Name: Rock_Small_01
   m_TagString: Untagged
@@ -696,6 +698,7 @@ GameObject:
   - component: {fileID: 33447169165225532}
   - component: {fileID: 23196310238182332}
   - component: {fileID: 65241201651122554}
+  - component: {fileID: 114343580616505928}
   m_Layer: 0
   m_Name: Rock_Small_01
   m_TagString: Untagged
@@ -2880,6 +2883,39 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.34908, y: 0.40653598, z: 0.40257096}
   m_Center: {x: 6.397255e-11, y: 0.13737988, z: 0.0000004991889}
+--- !u!114 &114198046388745536
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1379319111873646}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efe6230470c765e4596536d36ef600a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114343580616505928
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1989197760806996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efe6230470c765e4596536d36ef600a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114606810837681034
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1341554992342198}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efe6230470c765e4596536d36ef600a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!136 &136249248868219466
 CapsuleCollider:
   m_ObjectHideFlags: 1

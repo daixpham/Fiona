@@ -29,17 +29,26 @@ namespace UnityStandardAssets.Water
             Vector4 offsetClamped = new Vector4(Mathf.Repeat(offset4.x, 1.0f), Mathf.Repeat(offset4.y, 1.0f),
                 Mathf.Repeat(offset4.z, 1.0f), Mathf.Repeat(offset4.w, 1.0f));
             mat.SetVector("_WaveOffset", offsetClamped);
-            if(mD) moveDown();
+            if (mD)
+            {
+                moveDown();
+            }
         }
         private void OnTriggerEnter(Collider collider)
         {
-            if (collider.gameObject.tag == "Sandstorm")
+            if (collider.gameObject.tag == "Player")
                 mD = true;
                 
         }
+        private void OnTriggerExit(Collider collider)
+        {
+            if (collider.gameObject.tag == "Player")
+                mD = false;
+
+        }
         private void moveDown()
         {
-            this.transform.position -= new Vector3(0, 0.1f, 0);
+            this.transform.position -= new Vector3(0, 0.06f, 0);
         }
     }
 

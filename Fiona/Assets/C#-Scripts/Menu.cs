@@ -55,9 +55,9 @@ public class Menu : MonoBehaviour
         }
         if (EventSystem.current.currentSelectedGameObject.name.ToString().Equals("Start"))
         {
-//            print("Start");
-            SceneManager.LoadScene(2);
+            //print("Start");
             GameSingelton.start = true;
+            SceneManager.LoadScene(2);
         }
 
 
@@ -105,23 +105,19 @@ public class Menu : MonoBehaviour
 
 	public void difficultyChange(){
 		float f = slider.value;
+        GameSingelton.changeDifficulty(f);
+        GameSingelton.difficulty = f;
 		if (f == 0) {
-			difficultyText.text = "Schwierigkeitsgrad: Einfach";
-			GameSingelton.PlayerMaxHealth = 200;
-			GameSingelton.scoreMult = 1;
-		}
+            difficultyText.text = "Schwierigkeitsgrad: Einfach";
+        }
 		else if (f == 1) {
 			difficultyText.text = "Schwierigkeitsgrad: Normal";
-			GameSingelton.PlayerMaxHealth = 100;
-			GameSingelton.scoreMult = 2;
-		}
+        }
 
 		else{
 			difficultyText.text = "Schwierigkeitsgrad: Schwer";
-			GameSingelton.PlayerMaxHealth = 50;
-			GameSingelton.scoreMult = 3;
-		}
+        }
 
-		Debug.Log (difficultyText);
+		Debug.Log (difficultyText.text);
 	}
 }

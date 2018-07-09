@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public class GameSingelton : MonoBehaviour {
 
     [SerializeField]private static GameSingelton instance = null;
-    private float DRAIN_RATE = 0.1f;
+
     private enum sceneAllowed { Load=0, MainMenu=1,Game =2}
 
     public uint time { get; private set; }
@@ -16,8 +16,10 @@ public class GameSingelton : MonoBehaviour {
     public float distance { get; set; }
     public float TotalDistance { get; private set; }
     public int PlayerPoint { get; private set; }
+    private static bool blub = true;
 	public static float PlayerHealth { get; private set; }
-	public static float PlayerMaxHealth { get; set; }
+    public  static float DRAIN_RATE { get; set; }
+    public static float PlayerMaxHealth { get; set; }
 	public static int scoreMult { get; set; }
 
     public static bool start;
@@ -25,7 +27,12 @@ public class GameSingelton : MonoBehaviour {
     public static bool ButtonRestart ;
     public static bool Tutorial = true;
     private static bool first;
-    public const float SPEED = 0.3f;
+    public static float sandstormSpeed { get; set; }
+    public static float DrainSpeedSandstrom { get; private set; }// this is for the Sandstorm
+    public static float spawnSpeed;
+    public static float difficulty = 1;
+    public static float SPEED = 0.3f;
+   
     public  Vector3 move { get; set; }
     // Use this for initializationv
     public static GameSingelton Instance
@@ -55,7 +62,9 @@ public class GameSingelton : MonoBehaviour {
     }
     void Start()
     {
-
+        DRAIN_RATE = 0.1f;
+        DrainSpeedSandstrom = 0.2f;
+        sandstormSpeed = 0.05f;
         move = new Vector3(SPEED,0,0);
         ButtonMenu = false;
         ButtonRestart = false;
@@ -78,11 +87,29 @@ public class GameSingelton : MonoBehaviour {
     void Update()
     {
         //get Player 
+        if (blub&&start)
+        {
+            Debug.Log(difficulty);
+            changeDifficulty(difficulty);
+            resetVariables();
+            blub = false;
+        }
         if (start)
         {
             DrainHealth();
             ButtonMenu = false;
             ButtonRestart= false;
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                resetVariables();
+                start = false;
+                blub = true;
+                UnityEngine.SceneManagement.SceneManager.LoadScene((int)sceneAllowed.MainMenu);
+            }
+            if (Input.GetKeyDown(KeyCode.Return))
+            {
+                PlayerHealth = 0;
+            }
         }
         if (!start)
         {
@@ -91,15 +118,18 @@ public class GameSingelton : MonoBehaviour {
             {
                 resetVariables();
                 start = false;
+                blub = true;
                 UnityEngine.SceneManagement.SceneManager.LoadScene((int)sceneAllowed.MainMenu);
             }
             if (ButtonRestart)
             {
                 resetVariables();
                 start = true;
+                blub = true;
                 UnityEngine.SceneManagement.SceneManager.LoadScene((int)sceneAllowed.Game);
             }
         }
+
 
     }
 
@@ -145,6 +175,41 @@ public class GameSingelton : MonoBehaviour {
         while (!asyncLoad.isDone)
         {
             yield return null;
+        }
+    }
+
+    public static void changeDifficulty(float f)
+    {
+        if (f == 0)
+        {
+            WaterDrop.WaterRegen = 15;
+            PlayerMaxHealth = 200;
+            scoreMult = 1;
+            DRAIN_RATE = 0.1f;
+            sandstormSpeed = 0.05f;
+            spawnSpeed = 2.5f;
+            SPEED = 0.3f;
+        }
+        else if (f == 1)
+        {
+            WaterDrop.WaterRegen = 12;
+            PlayerMaxHealth = 100;
+            scoreMult = 2;
+            DRAIN_RATE = 0.1f;
+            sandstormSpeed = 0.2f;
+            spawnSpeed = 3f;
+            SPEED = 0.3f;
+        }
+
+        else
+        {
+            WaterDrop.WaterRegen = 11;
+            PlayerMaxHealth = 50;
+            scoreMult = 3;
+            DRAIN_RATE = 0.2f;
+            sandstormSpeed = 2f;
+            spawnSpeed = 1f;
+            SPEED = 0.3f;
         }
     }
 

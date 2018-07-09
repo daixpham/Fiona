@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class WaterDrop : MonoBehaviour {
-
-	// Use this for initialization
-	void Start ()
+    public static float WaterRegen;
+    // Use this for initialization
+    void Start ()
     {
 		
 	}
@@ -40,8 +40,7 @@ public class WaterDrop : MonoBehaviour {
     {
         if (other.gameObject.tag == "Player")
         {
-//            print(other.gameObject.name);
-            GameSingelton.Instance.RestoreHealth(20f);
+            GameSingelton.Instance.RestoreHealth(WaterRegen);
             Object.Destroy(this.gameObject);
             int numPoints = 10;
             for (int i = 0; i < numPoints; i++)

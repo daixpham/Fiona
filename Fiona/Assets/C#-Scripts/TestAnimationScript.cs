@@ -20,6 +20,7 @@ public class TestAnimationScript : MonoBehaviour {
     void Start () {
 		rigidBody = GetComponent<Rigidbody>();
         cameraObj = transform.GetChild(11).gameObject;
+        grounded = false;
     }
 
 	// Update is called once per frame
@@ -47,7 +48,7 @@ public class TestAnimationScript : MonoBehaviour {
        
         if (GameSingelton.PlayerHealth > 0)
         {
-            Debug.Log("Grounded" + grounded);
+  //          Debug.Log("Grounded" + grounded);
 
             controller.SetBool("IsRunning", true);
             if (Input.GetKeyDown(KeyCode.W) && grounded )
@@ -107,4 +108,12 @@ public class TestAnimationScript : MonoBehaviour {
 
 
     }
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.gameObject.tag == "Oasis")
+        {
+            GameSingelton.Instance.RestoreHealth(1f);
+        }
+    }
+
 }
